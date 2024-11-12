@@ -1,14 +1,15 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
-import { MatIcon, MatIconModule } from '@angular/material/icon';
+import { AppRoutingModule } from './app-routing.module';
 import { MatButton, MatButtonModule } from '@angular/material/button';
-import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatDivider } from '@angular/material/divider';
+import { MatIcon, MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from "@angular/material/menu";
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatToolbarModule } from "@angular/material/toolbar";
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { MatToolbarModule } from "@angular/material/toolbar";
   ],
   imports: [
     AppRoutingModule,
+    MatDivider,
     BrowserModule,
     MatButton,
     MatButtonModule,

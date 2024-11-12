@@ -178,7 +178,9 @@
 </style>
 
 <mat-toolbar>
-  <mat-icon>account_circle</mat-icon>
+  <button mat-icon-button class="example-icon" aria-label="icon-button with menu icon">
+    <mat-icon>menu</mat-icon>
+  </button>
   <span>&nbsp;{{ title }}</span>
   
   <span class="spacer"></span>
@@ -217,7 +219,7 @@
   </mat-menu>
 
 </mat-toolbar>
-
+<mat-divider></mat-divider>
 <main class="main">
   <div class="content">
     <div class="left-side">
@@ -269,9 +271,9 @@
       <h1>{{ title }}</h1>
       <br>
       <mat-icon>wb_sunny</mat-icon>
-      <br>
-      <button mat-button>ok</button>
-      <br>
+      <br><br>
+      <button mat-flat-button>Material Button</button>
+      <br><br>
       <mat-slide-toggle>Material Toggle</mat-slide-toggle>
     </div>
     <div class="divider" role="separator" aria-label="Divider"></div>

@@ -5,7 +5,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { MatIcon, MatIconModule } from '@angular/material/icon';
+import { MatButton, MatButtonModule } from '@angular/material/button';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatMenuModule } from "@angular/material/menu";
+import { MatToolbarModule } from "@angular/material/toolbar";
 
 @NgModule({
   declarations: [
@@ -14,8 +17,13 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
   imports: [
     AppRoutingModule,
     BrowserModule,
+    MatButton,
+    MatButtonModule,
+    MatIcon,
     MatIconModule,
-    MatSlideToggleModule
+    MatMenuModule,
+    MatSlideToggleModule,
+    MatToolbarModule,
   ],
   providers: [
     provideAnimationsAsync()

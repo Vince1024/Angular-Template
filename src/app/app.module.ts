@@ -34,4 +34,6 @@ import { MainTopMenuComponent } from './main-top-menu/main-top-menu.component';
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+  cssImports = './Themes/themes.scss'
+}

@@ -10,10 +10,12 @@ import { MatMenuModule } from "@angular/material/menu";
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatToolbarModule } from "@angular/material/toolbar";
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { MainTopMenuComponent } from './main-top-menu/main-top-menu.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MainTopMenuComponent
   ],
   imports: [
     AppRoutingModule,

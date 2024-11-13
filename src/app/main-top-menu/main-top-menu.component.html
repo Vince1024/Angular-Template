@@ -1,0 +1,49 @@
+
+<mat-toolbar>
+    
+    <button mat-icon-button class="example-icon" aria-label="icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+
+    <span class="vertival-align">&nbsp;
+      <img width="30" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+      {{ title }}
+    </span>
+    
+    <span class="spacer"></span>
+  
+    <button mat-icon-button [matMenuTriggerFor]="user_menu" aria-label="icon-button with a menu">
+      <mat-icon>person_outline</mat-icon>
+    </button>
+    <mat-menu #user_menu="matMenu">
+      <button mat-menu-item>
+        <mat-icon>settings</mat-icon>
+        <span>Settings</span>
+      </button>
+      <button mat-menu-item>
+        <mat-icon>exit_to_app</mat-icon>
+        <span>Logout</span>
+      </button>
+    </mat-menu>
+  
+    <button mat-icon-button [matMenuTriggerFor]="app_menu" aria-label="icon-button with a menu">
+      <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #app_menu="matMenu">
+      <button mat-menu-item>
+        <mat-icon>language</mat-icon>
+        <span>Language</span>
+      </button>
+      <button mat-menu-item disabled>
+        <mat-icon>palette</mat-icon>
+        <span>Theme</span>
+      </button>
+      <button mat-menu-item>
+        <mat-icon>info</mat-icon>
+        <span>About</span>
+      </button>
+    </mat-menu>
+  
+  </mat-toolbar>
+
+  <mat-divider></mat-divider>

@@ -1,5 +1,14 @@
-<app-main-top-menu [menuTitle]="title"></app-main-top-menu> <!-- Title from app.component -->
 
 
+<app-main-top-menu [menuTitle]="title"></app-main-top-menu> <!-- {{ title }} from app.component -->
+
+<main class="main">
+    <div class="content" fxLayoutGap="20px">
+
+        <button class="button" mat-flat-button>Material Button</button><button class="button" mat-flat-button>Material Button</button><br>
+        <button class="button" mat-flat-button>Material Button</button><button class="button" mat-flat-button>Material Button</button>
+
+    </div>
+</main>
 
 <router-outlet />

@@ -7,10 +7,7 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
-  title = 'Angular Template';
 
-  public getAppName() {
-    return this.title;
-  }
+  title = 'Angular Template';
 
 }

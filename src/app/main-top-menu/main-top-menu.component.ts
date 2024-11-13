@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-import { Title } from '@angular/platform-browser';
+import { Component, Input } from '@angular/core';
 import { AppComponent } from '../app.component';
 
 @Component({
@@ -9,6 +8,6 @@ import { AppComponent } from '../app.component';
 })
 export class MainTopMenuComponent {
 
-  title = 'Angular Template';
+  @Input() menuTitle = "";
 
 }

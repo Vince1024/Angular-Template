@@ -1,14 +1,16 @@
-
+<!-- Main Page -->
 
 <app-main-top-menu [menuTitle]="title"></app-main-top-menu> <!-- {{ title }} from app.component -->
-
-<div>Coucou</div>
-<div>{{ "Cancel" | translate }}</div>
 
 <main class="main">
     <div class="content">
 
-        <button class="button" mat-flat-button>Material Button</button><button class="button" mat-flat-button>{{ "OK" | translate }}</button><br>
+        <div>Coucou</div>
+        <div>{{ 'Coucou2' | translate }}</div>
+        <button class="button" mat-flat-button (click)="switchLanguage('en-US')">en-US</button>
+        <button class="button" mat-flat-button (click)="switchLanguage('fr-FR')">fr-FR</button>
+
+        <button class="button" mat-flat-button>Material Button</button><button class="button" mat-flat-button>{{ "Ok" | translate }}</button><br>
         <button class="button" mat-flat-button>{{ "Cancel" | translate }}</button><button class="button" mat-flat-button>{{ "Exit" | translate }}</button>
 
     </div>

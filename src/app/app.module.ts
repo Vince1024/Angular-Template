@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule, withInterceptorsFromDi } from '@angular/common/http';
 import { MainTopMenuComponent } from './main-top-menu/main-top-menu.component';
 import { MatButton, MatButtonModule } from '@angular/material/button';
 import { MatDivider } from '@angular/material/divider';
@@ -11,11 +11,12 @@ import { MatMenuModule } from "@angular/material/menu";
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatToolbarModule } from "@angular/material/toolbar";
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { provideHttpClient } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 
-export function HttpLoaderFactory(http:HttpClient){
-  return new TranslateHttpLoader(http);
+export function HttpLoaderFactory(http: HttpClient){
+  return new TranslateHttpLoader(http, '.assets/i18n/', '.json');
 }
 
 @NgModule({
@@ -39,12 +40,13 @@ export function HttpLoaderFactory(http:HttpClient){
       loader: {
         provide: TranslateLoader,
         useFactory: HttpLoaderFactory,
-        deps: [HttpClient],
-      },
-    }),
+        deps: [HttpClient]
+      }
+    })
   ],
   providers: [
-    provideAnimationsAsync()
+    provideAnimationsAsync(),
+    provideHttpClient(withInterceptorsFromDi())
   ],
   bootstrap: [AppComponent]
 })

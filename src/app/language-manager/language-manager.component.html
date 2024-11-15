@@ -1,1 +1,9 @@
-<p>language-manager works!</p>
+<p>installedLanguages : {{ installedLanguages }}</p>
+<mat-radio-group aria-label="Select an option">
+    <mat-radio-button *ngFor="let lang of installedLanguages" 
+                        value="2">{{ lang }}
+    </mat-radio-button><br>
+    <mat-radio-button value="1">Option 1</mat-radio-button><br>
+  <mat-radio-button value="2">Option 2</mat-radio-button>
+</mat-radio-group>
+  

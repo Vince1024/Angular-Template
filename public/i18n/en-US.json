@@ -1,6 +1,6 @@
 {
-    "Ok": "Ok",
-    "Cancel": "Cancel",
-    "Exit": "Exit",
-    "Error": "Error"
+    // Buttons labels
+    "btn.ok": "Ok",
+    "btn.cancel": "Cancel",
+    "btn.exit": "Exit"
 }

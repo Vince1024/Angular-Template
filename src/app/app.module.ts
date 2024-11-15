@@ -30,10 +30,10 @@ import { HttpClient, provideHttpClient, withInterceptorsFromDi } from '@angular/
     BrowserModule,
     TranslateModule.forRoot({
         loader: {
-            provide: TranslateLoader,
-            useFactory: HttpLoaderFactory,
-            deps: [HttpClient]
-        }
+                provide: TranslateLoader,
+                useFactory: HttpLoaderFactory,
+                deps: [HttpClient]
+                }
     }),
     MatButton,
     MatButtonModule,
@@ -50,6 +50,7 @@ import { HttpClient, provideHttpClient, withInterceptorsFromDi } from '@angular/
   ],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { 
   cssImports = './Themes/themes.scss'
 }

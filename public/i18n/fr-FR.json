@@ -1,6 +1,6 @@
 {
-    "Ok": "Accepter",
-    "Cancel": "Annuler",
-    "Exit": "Quitter",
-    "Error": "Erreur"
+    // Text des bouttons
+    "btn.ok": "Accepter",
+    "btn.cancel": "Annuler",
+    "btn.exit": "Quitter"
 }

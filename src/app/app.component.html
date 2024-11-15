@@ -5,13 +5,13 @@
 <main class="main">
     <div class="content">
 
-        <div>Current Lang : {{ Lang }}</div>
-        <div>{{ 'Coucou2' | translate }}</div>
         <button class="button" mat-flat-button (click)="switchLanguage('en-US')">en-US</button>
         <button class="button" mat-flat-button (click)="switchLanguage('fr-FR')">fr-FR</button>
         <br>
-        <button class="button" mat-flat-button>Material Button</button><button class="button" mat-flat-button>{{ "Ok" | translate }}</button><br>
-        <button class="button" mat-flat-button>{{ "Cancel" | translate }}</button><button class="button" mat-flat-button>{{ "Exit" | translate }}</button>
+        <button class="button" mat-flat-button>Material Button</button>
+        <button class="button" mat-flat-button>{{ "Ok" | translate }}</button><br>
+        <button class="button" mat-flat-button>{{ "Cancel" | translate }}</button>
+        <button class="button" mat-flat-button>{{ "Exit" | translate }}</button>
 
     </div>
 </main>

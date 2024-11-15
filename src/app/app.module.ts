@@ -2,8 +2,11 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClient, HttpClientModule, withInterceptorsFromDi } from '@angular/common/http';
+
+// import modules
 import { MainTopMenuComponent } from './main-top-menu/main-top-menu.component';
+
+// import Material
 import { MatButton, MatButtonModule } from '@angular/material/button';
 import { MatDivider } from '@angular/material/divider';
 import { MatIcon, MatIconModule } from '@angular/material/icon';
@@ -11,13 +14,11 @@ import { MatMenuModule } from "@angular/material/menu";
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatToolbarModule } from "@angular/material/toolbar";
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
-import { provideHttpClient } from '@angular/common/http';
-import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 
-export function HttpLoaderFactory(http: HttpClient){
-  return new TranslateHttpLoader(http);
-}
+// import ngx-translate and the http loader
+import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import { HttpClient, provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,13 @@ export function HttpLoaderFactory(http: HttpClient){
   imports: [
     AppRoutingModule,
     BrowserModule,
-    HttpClientModule,
+    TranslateModule.forRoot({
+        loader: {
+            provide: TranslateLoader,
+            useFactory: HttpLoaderFactory,
+            deps: [HttpClient]
+        }
+    }),
     MatButton,
     MatButtonModule,
     MatDivider,
@@ -36,13 +43,6 @@ export function HttpLoaderFactory(http: HttpClient){
     MatMenuModule,
     MatSlideToggleModule,
     MatToolbarModule,
-    TranslateModule.forRoot({
-      loader: {
-        provide: TranslateLoader,
-        useFactory: HttpLoaderFactory,
-        deps: [HttpClient]
-      }
-    })
   ],
   providers: [
     provideAnimationsAsync(),
@@ -52,4 +52,9 @@ export function HttpLoaderFactory(http: HttpClient){
 })
 export class AppModule { 
   cssImports = './Themes/themes.scss'
+}
+
+// required for AOT compilation
+export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
+  return new TranslateHttpLoader(http, './i18n/', '.json');
 }

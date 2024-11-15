@@ -1,5 +1,7 @@
 {
     "btn.ok": "Aceptar",
     "btn.cancel": "Cancelar",
-    "btn.exit": "Irse"
+    "btn.exit": "Irse",
+
+    "language.selection": "Seleccione un idioma"
 }

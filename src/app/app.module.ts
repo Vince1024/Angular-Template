@@ -19,11 +19,13 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import { HttpClient, provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
+import { LanguageManagerComponent } from './language-manager/language-manager.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MainTopMenuComponent
+    MainTopMenuComponent,
+    LanguageManagerComponent
   ],
   imports: [
     AppRoutingModule,

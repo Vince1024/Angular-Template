@@ -40,7 +40,9 @@
             ],
             "styles": [
               "@angular/material/prebuilt-themes/azure-blue.css",
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/app/themes/default-light.css",
+              "src/app/themes/default-dark.css"
             ],
             "scripts": []
           },

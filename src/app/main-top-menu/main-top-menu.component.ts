@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, inject } from '@angular/core';
+import { ThemeManagerService } from '../services/theme-manager.service';
 
 @Component({
   selector: 'app-main-top-menu',
@@ -8,5 +9,12 @@ import { Component, Input } from '@angular/core';
 export class MainTopMenuComponent {
 
   @Input() menuTitle = "";
+
+  private themeManager = inject(ThemeManagerService);
+    theme = this.themeManager.theme;
+
+    toggleTheme() {
+      this.themeManager.toggleTheme();
+    }
 
 }

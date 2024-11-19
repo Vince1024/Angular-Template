@@ -1,16 +1,20 @@
 <!-- Main Page -->
 
-<app-main-top-menu [menuTitle]="title"></app-main-top-menu> <!-- {{ title }} from app.component -->
-
 <main class="main">
-    <div class="content">
 
-        <button mat-raised-button>Material Button</button>
-        <button mat-raised-button>{{ "btn.ok" | translate }}</button>
-        <button mat-raised-button>{{ "btn.cancel" | translate }}</button>
-        <button mat-raised-button>{{ "btn.exit" | translate }}</button>
+<div>
+    <app-main-top-menu [menuTitle]="title"></app-main-top-menu> <!-- {{ title }} from app.component.ts -->
+</div>
 
-    </div>
+<div class="content">
+
+    <button mat-raised-button>Material Button</button>
+    <button mat-raised-button>{{ "btn.ok" | translate }}</button>
+    <button mat-raised-button>{{ "btn.cancel" | translate }}</button>
+    <button mat-raised-button>{{ "btn.exit" | translate }}</button>
+
+</div>
+
 </main>
 
 <router-outlet />

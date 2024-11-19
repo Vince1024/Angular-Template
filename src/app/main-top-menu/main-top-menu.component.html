@@ -22,6 +22,10 @@
     <mat-slide-toggle class="small-toggle"></mat-slide-toggle>
     <mat-icon>wb_sunny</mat-icon> -->
 
+    <button mat-icon-button aria-label="icon-button with a menu" (click)="toggleTheme()">
+      <mat-icon>{{ theme() === "light" ? "light_mode" : "dark_mode" }}</mat-icon>
+    </button>
+
     <button mat-icon-button [matMenuTriggerFor]="user_menu" aria-label="icon-button with a menu">
       <mat-icon>person_outline</mat-icon>
     </button>

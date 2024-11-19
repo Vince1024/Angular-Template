@@ -8,3 +8,29 @@
 /* @import "@angular/material/prebuilt-themes/purple-green.css"; */
 /* @import "@angular/material/prebuilt-themes/rose-red.css"; */
 /* @import "@angular/material/prebuilt-themes/azure-blue.css"; */ 
+
+@use "@angular/material" as mat;
+@include mat.core();
+
+$default-light-theme: mat.define-theme(
+  (
+    color: (
+        // theme-type: light,
+        // primary: mat.$azure-palette,
+        use-system-variables: true,
+        ),
+    typography: (
+        use-system-variables: true,
+        ),
+  )
+);
+
+:root {
+    @include mat.all-component-themes($default-light-theme);
+    @include mat.system-level-colors($default-light-theme);
+    @include mat.system-level-typography($default-light-theme);
+}
+
+/* html {
+    @include mat.all-component-themes($custom-theme);
+  } */

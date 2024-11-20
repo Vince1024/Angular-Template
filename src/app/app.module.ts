@@ -22,12 +22,14 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
+import { ThemeManagerComponent } from './theme-manager/theme-manager.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainTopMenuComponent,
-    LanguageManagerComponent
+    LanguageManagerComponent,
+    ThemeManagerComponent
   ],
   imports: [
     AppRoutingModule,

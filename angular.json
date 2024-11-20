@@ -41,8 +41,76 @@
             "styles": [
               "@angular/material/prebuilt-themes/azure-blue.css",
               "src/styles.scss",
-              "src/app/themes/default-light.css",
-              "src/app/themes/default-dark.css"
+              {
+                "input": "src/app/themes/azure-blue.css",
+                "bundleName": "azure-blue",
+                "inject": false
+               },
+               {
+                "input": "src/app/themes/cyan-orange.css",
+                "bundleName": "cyan-orange",
+                "inject": false
+               },
+               {
+                "input": "src/app/themes/deeppurple-amber.css",
+                "bundleName": "deeppurple-amber",
+                "inject": false
+               },
+               {
+                "input": "src/app/themes/indigo-pink.css",
+                "bundleName": "indigo-pink",
+                "inject": false
+               },
+               {
+                "input": "src/app/themes/magenta-violet.css",
+                "bundleName": "magenta-violet",
+                "inject": false
+               },
+               {
+                "input": "src/app/themes/pink-bluegrey.css",
+                "bundleName": "pink-bluegrey",
+                "inject": false
+               },
+               {
+                "input": "src/app/themes/purple-green.css",
+                "bundleName": "purple-green",
+                "inject": false
+               },
+               {
+                "input": "src/app/themes/rose-red.css",
+                "bundleName": "rose-red",
+                "inject": false
+               },
+               {
+                "input": "src/app/themes/red-light.css",
+                "bundleName": "red-light",
+                "inject": false
+               },
+               {
+                "input": "src/app/themes/red-dark.css",
+                "bundleName": "red-dark",
+                "inject": false
+               },
+               {
+                "input": "src/app/themes/green-light.css",
+                "bundleName": "green-light",
+                "inject": false
+               },
+               {
+                "input": "src/app/themes/green-dark.css",
+                "bundleName": "green-dark",
+                "inject": false
+               },
+               {
+                "input": "src/app/themes/blue-light.css",
+                "bundleName": "blue-light",
+                "inject": false
+               },
+               {
+                "input": "src/app/themes/blue-dark.css",
+                "bundleName": "blue-dark",
+                "inject": false
+               }
             ],
             "scripts": []
           },

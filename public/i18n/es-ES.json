@@ -3,5 +3,6 @@
     "btn.cancel": "Cancelar",
     "btn.exit": "Irse",
 
-    "language.selection": "Seleccione un idioma"
+    "language.selection": "Seleccione un idioma",
+    "theme.selection": "Selecciona un tema"
 }

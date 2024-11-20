@@ -23,10 +23,6 @@
     <mat-icon>wb_sunny</mat-icon>
     (click)="toggleTheme()" -->
 
-    <button mat-icon-button aria-label="icon-button with a menu" >
-      <mat-icon>palette</mat-icon>
-    </button>
-
     <button mat-icon-button [matMenuTriggerFor]="user_menu" aria-label="icon-button with a menu">
       <mat-icon>person_outline</mat-icon>
     </button>
@@ -49,9 +45,8 @@
         <mat-icon>language</mat-icon>
         <span>Language</span>
       </button>
-      <button mat-menu-item disabled>
+      <button mat-menu-item [matMenuTriggerFor]="theme_menu">
         <mat-icon>palette</mat-icon>
-
         <span>Theme</span>
       </button>
       <button mat-menu-item disabled>
@@ -62,6 +57,10 @@
 
     <mat-menu #lang_menu="matMenu">
       <app-language-manager></app-language-manager>
+    </mat-menu>
+
+    <mat-menu #theme_menu="matMenu">
+      <app-theme-manager></app-theme-manager>
     </mat-menu>
   
 </mat-toolbar>

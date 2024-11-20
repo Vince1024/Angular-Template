@@ -20,10 +20,11 @@
   
     <!-- <mat-icon>nightlight</mat-icon>
     <mat-slide-toggle class="small-toggle"></mat-slide-toggle>
-    <mat-icon>wb_sunny</mat-icon> -->
+    <mat-icon>wb_sunny</mat-icon>
+    (click)="toggleTheme()" -->
 
-    <button mat-icon-button aria-label="icon-button with a menu" (click)="toggleTheme()">
-      <mat-icon>{{ theme() === "light" ? "light_mode" : "dark_mode" }}</mat-icon>
+    <button mat-icon-button aria-label="icon-button with a menu" >
+      <mat-icon>palette</mat-icon>
     </button>
 
     <button mat-icon-button [matMenuTriggerFor]="user_menu" aria-label="icon-button with a menu">

@@ -1,8 +1,9 @@
-<label>{{ "theme.selection" | translate }}</label>
-
-<br>
-<mat-radio-group aria-label="Select an option">
-    <div *ngFor="let theme of themeArr">
-        <mat-radio-button [value]="theme" (change)="radioChange($event)" [checked]="theme === currentTheme">{{ theme }}</mat-radio-button>
-    </div>
-</mat-radio-group>
+<div class="container">
+    <label class="list-header">{{ "theme.selection" | translate }} :</label>
+    <p>{{ currentTheme }}</p>
+    <mat-radio-group aria-label="Select an option">
+        <div *ngFor="let theme of themeArr">
+            <mat-radio-button [value]="theme" (change)="radioChange($event)" [checked]="theme === currentTheme">{{ theme }}</mat-radio-button>
+        </div>
+    </mat-radio-group>
+</div>

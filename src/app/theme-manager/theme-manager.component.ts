@@ -32,7 +32,7 @@ export class ThemeManagerComponent {
                       Theme.BLUE_LIGHT,
                       Theme.BLUE_DARK
                     ];
-    console.log('themeArr => ', this.themeArr);
+    // console.log('themeArr => ', this.themeArr);
   }
 
   ngOnInit(): void {
@@ -50,7 +50,7 @@ export class ThemeManagerComponent {
   }
 
   radioChange(event: MatRadioChange) {
-    console.log(event.value);
+    // console.log(event.value);
     this.changeTheme(event.value);
   }
 

@@ -1,9 +1,9 @@
-<label>{{ "language.selection" | translate }}</label>
-
-<br>
-<mat-radio-group aria-label="Select an option">
-    <div *ngFor="let lang of installedLanguages">
-        <mat-radio-button [value]="lang" (change)="radioChange($event)" [checked]="lang === selectedLang">{{ lang }}</mat-radio-button>
-    </div>
-</mat-radio-group>
+<div class="container">
+    <label>{{ "language.selection" | translate }} :</label>
+    <mat-radio-group aria-label="Select an option">
+        <div *ngFor="let lang of installedLanguages">
+            <mat-radio-button [value]="lang" (change)="radioChange($event)" [checked]="lang === selectedLang">{{ lang }}</mat-radio-button>
+        </div>
+    </mat-radio-group>
+</div>
   

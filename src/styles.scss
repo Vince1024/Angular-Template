@@ -35,9 +35,10 @@ button {
   margin-top: 5px;
   margin-left: 5px;
   margin-bottom: 5px;
-  margin-right: 20px;
+  margin-right: 5px;
 }
 
-.list-header {
-  margin: 5px;
+mat-card{
+  // width: fit-content;
+  width: 50%;
 }

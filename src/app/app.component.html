@@ -8,14 +8,25 @@
 
 <div class="content">
 
+    <mat-card class="container" appearance="outlined">
+        <mat-card-content>
+            <h3>{{ this.globalService.Vars.value.title }}</h3>
+            <h4>This is a template for any Angular project.</h4>
+            <p>This includes :</p>
+            <ul>
+                <li>Material Design.</li>
+                <li>A default top menu bar from app-main-top-menu component.</li>
+                <li>Dynamic Theming</li>
+                <li>Dynamic Multi-Language support with ngx-translate.</li>
+                <p></p>
+            </ul> 
+    </mat-card-content>
+    </mat-card>              
+
     <button mat-raised-button>Material Button</button>
     <button mat-raised-button>{{ "btn.ok" | translate }}</button>
     <button mat-raised-button>{{ "btn.cancel" | translate }}</button>
     <button mat-raised-button>{{ "btn.exit" | translate }}</button>
-    <br>
-    <app-language-manager></app-language-manager>
-    <app-language-manager></app-language-manager>
-    <app-theme-manager></app-theme-manager>
 
 </div>
 

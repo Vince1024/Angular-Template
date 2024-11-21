@@ -9,8 +9,10 @@ import { LanguageManagerComponent } from './language-manager/language-manager.co
 
 // import Material Design
 import { MatButton, MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatDivider } from '@angular/material/divider';
+import { MatGridListModule } from '@angular/material/grid-list';
 import { MatIcon, MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from "@angular/material/menu";
 import { MatRadioModule } from '@angular/material/radio';
@@ -43,8 +45,10 @@ import { ThemeManagerComponent } from './theme-manager/theme-manager.component';
     }),
     MatButton,
     MatButtonModule,
+    MatCardModule,
     MatCheckboxModule,
     MatDivider,
+    MatGridListModule,
     MatIcon,
     MatIconModule,
     MatMenuModule,

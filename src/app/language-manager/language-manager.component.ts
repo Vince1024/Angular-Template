@@ -20,25 +20,18 @@ export class LanguageManagerComponent {
   ){
     // Subscribe and listen for any changes
     this.globalService.Vars.subscribe(
-      // {
-      // next: newValue => this.currentLang = this.globalService.Vars.value.currentLanguage
-      // }
   );
 
     this.translate.addLangs(['en-US', 'fr-FR', 'es-ES', 'de-DE']);
     this.translate.setDefaultLang('en-US');
 
     this.installedLanguages = this.getInstalledLanguages();
-    //this.currentLang = this.globalService.Vars.value.currentLanguage;
-
-    //this.switchLanguage(this.currentLang ||'en-US');
     this.switchLanguage(this.globalService.Vars.value.currentLanguage ||'en-US');
   }
   
   switchLanguage(language: string) {
     this.translate.use(language);
     this.globalService.Vars.value.currentLanguage = language;
-    //this.currentLang = this.globalService.Vars.value.currentLanguage;
   }
   
   getInstalledLanguages() {

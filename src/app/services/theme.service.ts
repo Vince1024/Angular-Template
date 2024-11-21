@@ -5,6 +5,7 @@ import { Theme } from './theme';;
 @Injectable({
   providedIn: 'root'
 })
+
 export class ThemeService {
   private style: HTMLLinkElement | undefined;
   private cssFile: string | undefined;
@@ -14,7 +15,7 @@ export class ThemeService {
     @Inject(DOCUMENT) private document: Document
   ) { }
 
-  currentTheme = '';
+  currentTheme: string | undefined;
 
   setTheme(theme: Theme, renderer2: Renderer2) {
     this.cssFile = `${theme}.css`;

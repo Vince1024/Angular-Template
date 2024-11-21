@@ -2,6 +2,7 @@ import { Component, Renderer2 } from '@angular/core';
 import { Theme } from '../services/theme';
 import { ThemeService } from '../services/theme.service';
 import { MatRadioChange } from '@angular/material/radio';
+import { GlobalService } from '../services/global.service';
 
 @Component({
   selector: 'app-theme-manager',
@@ -11,12 +12,17 @@ import { MatRadioChange } from '@angular/material/radio';
 export class ThemeManagerComponent {
 
   themeArr: Theme[];
-  currentTheme = '';
 
   constructor(
+    public globalService: GlobalService,
     private themeService: ThemeService,
     private renderer2: Renderer2,
-  ) {
+  ) 
+  
+  {
+    // Subscribe and listen for any changes
+    this.globalService.Vars.subscribe();
+
     this.themeArr = [ Theme.AZURE_BLUE, 
                       Theme.CYAN_ORANGE, 
                       Theme.DEEPPURPLE_AMBER, 
@@ -40,17 +46,15 @@ export class ThemeManagerComponent {
   }
 
   initialize() {
-    this.themeService.setTheme(Theme.AZURE_BLUE, this.renderer2);
-    this.currentTheme = this.themeService.currentTheme;
+    this.themeService.setTheme(this.globalService.Vars.value.currentTheme, this.renderer2);
   }
 
   changeTheme(theme: Theme) {
     this.themeService.setTheme(theme, this.renderer2);
-    this.currentTheme = this.themeService.currentTheme;
+    this.globalService.Vars.value.currentTheme = this.themeService.currentTheme;
   }
 
   radioChange(event: MatRadioChange) {
-    // console.log(event.value);
     this.changeTheme(event.value);
   }
 

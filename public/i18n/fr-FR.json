@@ -1,5 +1,10 @@
 {
-    "": "",
+    "languages": {
+        "de-DE": "Allemand",
+        "en-US": "Anglais",
+        "es-ES": "Espagnol",
+        "fr-FR": "Français"
+    },
 
     "btn.ok": "Accepter",
     "btn.cancel": "Annuler",

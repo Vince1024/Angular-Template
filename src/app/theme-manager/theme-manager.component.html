@@ -1,9 +1,9 @@
 <div class="container">
     <label class="list-header">{{ "theme.selection" | translate }} :</label>
-    <p>{{ currentTheme }}</p>
+    <!-- <p>{{ this.globalService.Vars.value.currentTheme }}</p> -->
     <mat-radio-group aria-label="Select an option">
         <div *ngFor="let theme of themeArr">
-            <mat-radio-button [value]="theme" (change)="radioChange($event)" [checked]="theme === currentTheme">{{ theme }}</mat-radio-button>
+            <mat-radio-button [value]="theme" (change)="radioChange($event)" [checked]="theme === this.globalService.Vars.value.currentTheme">{{ theme }}</mat-radio-button>
         </div>
     </mat-radio-group>
 </div>

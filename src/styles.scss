@@ -23,6 +23,12 @@ body {
     align-items: center;
   }
 
+.center-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
 .small-toggle {
     transform: scale(0.5);
   }
@@ -40,5 +46,5 @@ button {
 
 mat-card{
   // width: fit-content;
-  width: 50%;
+  width: 80%;
 }

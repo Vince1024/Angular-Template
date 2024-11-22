@@ -19,8 +19,7 @@ export class LanguageManagerComponent {
     public globalService: GlobalService
   ){
     // Subscribe and listen for any changes
-    this.globalService.Vars.subscribe(
-  );
+    this.globalService.Vars.subscribe();
 
     this.translate.addLangs(['en-US', 'fr-FR', 'es-ES', 'de-DE']);
     this.translate.setDefaultLang('en-US');
@@ -32,6 +31,7 @@ export class LanguageManagerComponent {
   switchLanguage(language: string) {
     this.translate.use(language);
     this.globalService.Vars.value.currentLanguage = language;
+    this.globalService.saveLocalStorage();
   }
   
   getInstalledLanguages() {

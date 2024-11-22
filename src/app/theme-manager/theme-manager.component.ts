@@ -52,6 +52,7 @@ export class ThemeManagerComponent {
   changeTheme(theme: Theme) {
     this.themeService.setTheme(theme, this.renderer2);
     this.globalService.Vars.value.currentTheme = this.themeService.currentTheme;
+    this.globalService.saveLocalStorage();
   }
 
   radioChange(event: MatRadioChange) {

@@ -3,10 +3,6 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
 
-// import modules
-import { MainTopMenuComponent } from './main-top-menu/main-top-menu.component';
-import { LanguageManagerComponent } from './language-manager/language-manager.component';
-
 // import Material Design
 import { MatButton, MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
@@ -24,18 +20,31 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
+
+//Global
+import { GlobalService } from './services/global.service';
+import { AuthenticationService } from './services/authentication.service';
+import { AuthenticationComponent } from './authentication/authentication.component';
+import { MainTopMenuComponent } from './main-top-menu/main-top-menu.component';
 import { ThemeManagerComponent } from './theme-manager/theme-manager.component';
+import { LanguageManagerComponent } from './language-manager/language-manager.component';
+import { TemplateComponent } from './template/template.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
+    AuthenticationService,
+    AuthenticationComponent,
     MainTopMenuComponent,
     LanguageManagerComponent,
+    TemplateComponent,
     ThemeManagerComponent
   ],
   imports: [
     AppRoutingModule,
     BrowserModule,
+    GlobalService,
     TranslateModule.forRoot({
         loader: {
                 provide: TranslateLoader,

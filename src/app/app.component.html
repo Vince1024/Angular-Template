@@ -6,44 +6,7 @@
     <app-main-top-menu [menuTitle]="title"></app-main-top-menu> <!-- {{ title }} from app.component.ts -->
 </div>
 
-<div class="content">
-
-    <!--
-    This is an exanple content.
-    All between this two comments can be deleted
-    -->
-
-    <div class="center-div">
-        <mat-card class="container" appearance="outlined">
-            <mat-card-content>
-                <h3>{{ this.globalService.Vars.value.title }}</h3>
-                <h4>This is a template for any Angular project.</h4>
-                <p>This includes :</p>
-                <ul>
-                    <li>Material Design.</li>
-                    <li>A default top menu bar from app-main-top-menu component.</li>
-                    <li>Dynamic Theming</li>
-                    <li>Dynamic Multi-Language support with ngx-translate.</li>
-                    <li>Preserve User Settings with LocalStorage Service</li>
-                    <p></p>
-                </ul> 
-        </mat-card-content>
-        </mat-card> 
-    </div>   
+    <router-outlet />
     
-    <!--
-    End comment
-    -->
-
-    <div class="center-div">
-        <button mat-raised-button>Material Button</button>
-        <button mat-raised-button>{{ "btn.ok" | translate }}</button>
-        <button mat-raised-button>{{ "btn.cancel" | translate }}</button>
-        <button mat-raised-button>{{ "btn.exit" | translate }}</button>
-    </div>
-
-</div>
-
 </main>
 
-<router-outlet />

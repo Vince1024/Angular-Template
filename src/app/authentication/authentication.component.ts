@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthenticationService } from '../services/authentication.service';
-import { Router } from '@angular/router';
+import { FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-authentication',
@@ -10,31 +10,28 @@ import { Router } from '@angular/router';
 
 export class AuthenticationComponent implements OnInit {
 
-  //authenticationStatus: boolean | undefined;
   username: string = '';
   password: string = '';
 
-  constructor(private authenticationService: AuthenticationService, private router: Router) {
+  nameFormControl = new FormControl('', [Validators.required]);
+  
+  StrongPasswordRegx: RegExp = /^(?=[^A-Z]*[A-Z])(?=[^a-z]*[a-z])(?=\D*\d)(?=.*[!@#$%^&*]).+$/;
+  passFormControl = new FormControl('', [Validators.required, Validators.minLength(12), Validators.pattern(this.StrongPasswordRegx)]);
+
+  constructor(private authenticationService: AuthenticationService) {
 
   }
 
   ngOnInit(): void {
-    //this.authenticationStatus = this.authenticationService.isAuth;
+
   }
 
   signIn() {
-    this.authenticationService.signIn(this.username, this.password).then(
-      () => {
-        //this.authenticationStatus = this.authenticationService.isAuth;
-        //console.log('Authentication Success for user [' + this.username + ']');
-        //this.router.navigate(['template']);
-      }
-    );
+    this.authenticationService.signIn(this.username, this.password)
   }
 
-  signOut(user: string) {
-    this.authenticationService.signOut(user);
-    //this.authenticationStatus = this.authenticationService.isAuth;
-  }
+  // signOut(user: string) {
+  //   this.authenticationService.signOut(user);
+  // }
 
 }

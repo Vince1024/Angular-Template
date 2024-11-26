@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 // import Material Design
 import { MatButton, MatButtonModule } from '@angular/material/button';
@@ -51,6 +51,7 @@ import { TemplateComponent } from './template/template.component';
     BrowserModule,
     // GlobalService,
     FormsModule,
+    ReactiveFormsModule,
     TranslateModule.forRoot({
         loader: {
                 provide: TranslateLoader,

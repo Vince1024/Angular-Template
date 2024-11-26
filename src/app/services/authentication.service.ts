@@ -13,14 +13,11 @@ export class AuthenticationService {
     this.globalService.Vars.subscribe();
    }
 
-  isAuth = false;
-
     signIn(user: string, pass: string) {
         return new Promise(
             (resolve, reject) => {
                 setTimeout(() => {
-                    this.isAuth = true;
-                    this.globalService.Vars.value.username = user;
+                    this.globalService.Vars.value.currentUser = user;
                     this.globalService.Vars.value.isAuth = true;
                     console.log('Authentication Success for user [' + user + ']');
                     this.router.navigate(['template']);
@@ -32,10 +29,9 @@ export class AuthenticationService {
     }
 
     signOut(user: string) {
-        this.isAuth = false;
-        this.globalService.Vars.value.username = '';
+        this.globalService.Vars.value.currentUser = '';
         this.globalService.Vars.value.isAuth = false;
-        console.log('Authentication Success for user [' + user + ']');
+        console.log('Logout Success for user [' + user + ']');
         this.router.navigate(['authentication']);
     }
 

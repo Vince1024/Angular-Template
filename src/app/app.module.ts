@@ -2,14 +2,19 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 // import Material Design
 import { MatButton, MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatDivider } from '@angular/material/divider';
+import { MatFormField } from '@angular/material/form-field';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatIcon, MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
+import { MatLabel } from '@angular/material/form-field';
 import { MatMenuModule } from "@angular/material/menu";
 import { MatRadioModule } from '@angular/material/radio';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
@@ -22,8 +27,8 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 
 //Global
-import { GlobalService } from './services/global.service';
-import { AuthenticationService } from './services/authentication.service';
+// import { GlobalService } from './services/global.service';
+// import { AuthenticationService } from './services/authentication.service';
 import { AuthenticationComponent } from './authentication/authentication.component';
 import { MainTopMenuComponent } from './main-top-menu/main-top-menu.component';
 import { ThemeManagerComponent } from './theme-manager/theme-manager.component';
@@ -34,7 +39,7 @@ import { TemplateComponent } from './template/template.component';
 @NgModule({
   declarations: [
     AppComponent,
-    AuthenticationService,
+    //AuthenticationService,
     AuthenticationComponent,
     MainTopMenuComponent,
     LanguageManagerComponent,
@@ -44,7 +49,8 @@ import { TemplateComponent } from './template/template.component';
   imports: [
     AppRoutingModule,
     BrowserModule,
-    GlobalService,
+    // GlobalService,
+    FormsModule,
     TranslateModule.forRoot({
         loader: {
                 provide: TranslateLoader,
@@ -57,9 +63,13 @@ import { TemplateComponent } from './template/template.component';
     MatCardModule,
     MatCheckboxModule,
     MatDivider,
+    MatFormField,
+    MatFormFieldModule,
     MatGridListModule,
     MatIcon,
     MatIconModule,
+    MatInputModule,
+    MatLabel,
     MatMenuModule,
     MatRadioModule,
     MatSlideToggleModule,

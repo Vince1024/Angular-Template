@@ -7,6 +7,7 @@
 
     <div class="center-div">
         <mat-card class="container" appearance="outlined">
+            <mat-card-title>{{ this.globalService.Vars.value.title }}</mat-card-title>
             <mat-card-content>
                 <h3>{{ this.globalService.Vars.value.title }}</h3>
                 <h4>This is a template for any Angular project.</h4>
@@ -26,6 +27,17 @@
     <!--
     End comment
     -->
+
+    <mat-form-field class="example-form-field">
+        <mat-label>Clearable input</mat-label>
+        <input matInput type="password" [(ngModel)]="value">
+        @if (value) {
+          <button matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+            <mat-icon>close</mat-icon>
+          </button>
+        }
+      </mat-form-field>
+      
 
     <div class="center-div">
         <button mat-raised-button>Material Button</button>

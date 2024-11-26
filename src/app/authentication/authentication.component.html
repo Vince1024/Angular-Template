@@ -1,1 +1,15 @@
-<p>authentication works!</p>
+<mat-card class="container">
+    <mat-card-title>Login</mat-card-title>
+        <mat-card-content>
+
+            <mat-label>User Name</mat-label>
+            
+            <input matInput type="text" [(ngModel)]="username">
+            @if (username) {
+                <button matSuffix mat-icon-button aria-label="Clear" (click)="username=''">
+                <mat-icon>close</mat-icon>
+                </button>
+            }
+
+        </mat-card-content>
+</mat-card>ù

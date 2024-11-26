@@ -6,7 +6,10 @@ import { GlobalService } from '../services/global.service';
   templateUrl: './template.component.html',
   styleUrl: './template.component.scss'
 })
+
 export class TemplateComponent {
+
+  value: string | undefined; 
 
   constructor (public globalService: GlobalService){
     // Subscribe and listen for any changes

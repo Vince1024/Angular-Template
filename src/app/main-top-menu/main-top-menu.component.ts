@@ -1,4 +1,6 @@
 import { Component, Input, inject, signal } from '@angular/core';
+import { GlobalService } from '../services/global.service';
+import { AuthenticationService } from '../services/authentication.service';
 
 @Component({
   selector: 'app-main-top-menu',
@@ -7,6 +9,16 @@ import { Component, Input, inject, signal } from '@angular/core';
 })
 export class MainTopMenuComponent {
 
+  constructor(public globalService: GlobalService,private authenticationService: AuthenticationService) 
+  {
+    // Subscribe and listen for any changes
+    this.globalService.Vars.subscribe();
+   }
+
   @Input() menuTitle = "";
+
+  logOut(user: string){
+    this.authenticationService.signOut(user);
+  }
 
 }

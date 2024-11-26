@@ -20,6 +20,7 @@ export class GlobalService {
     version: '1.0.0',
 
     currentUser: '',
+    isAuth: false,
     currentLanguage: '',
     currentTheme: 'azure-blue'
   });

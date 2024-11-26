@@ -27,19 +27,16 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 
 //Global
-// import { GlobalService } from './services/global.service';
-// import { AuthenticationService } from './services/authentication.service';
-import { AuthenticationComponent } from './authentication/authentication.component';
-import { MainTopMenuComponent } from './main-top-menu/main-top-menu.component';
-import { ThemeManagerComponent } from './theme-manager/theme-manager.component';
-import { LanguageManagerComponent } from './language-manager/language-manager.component';
-import { TemplateComponent } from './template/template.component';
+import { AuthenticationComponent } from './components/authentication/authentication.component';
+import { MainTopMenuComponent } from './components/main-top-menu/main-top-menu.component';
+import { ThemeManagerComponent } from './components/theme-manager/theme-manager.component';
+import { LanguageManagerComponent } from './components/language-manager/language-manager.component';
+import { TemplateComponent } from './components/template/template.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    //AuthenticationService,
     AuthenticationComponent,
     MainTopMenuComponent,
     LanguageManagerComponent,
@@ -49,7 +46,6 @@ import { TemplateComponent } from './template/template.component';
   imports: [
     AppRoutingModule,
     BrowserModule,
-    // GlobalService,
     FormsModule,
     ReactiveFormsModule,
     TranslateModule.forRoot({

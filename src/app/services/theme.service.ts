@@ -1,6 +1,6 @@
 import { DOCUMENT } from '@angular/common';
 import { Inject, Injectable, Renderer2 } from '@angular/core';
-import { Theme } from './theme';;
+import { Theme } from '../class/theme';;
 
 @Injectable({
   providedIn: 'root'

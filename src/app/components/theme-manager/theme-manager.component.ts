@@ -1,8 +1,8 @@
 import { Component, Renderer2 } from '@angular/core';
-import { Theme } from '../services/theme';
-import { ThemeService } from '../services/theme.service';
+import { Theme } from '../../class/theme';
+import { ThemeService } from '../../services/theme.service';
 import { MatRadioChange } from '@angular/material/radio';
-import { GlobalService } from '../services/global.service';
+import { GlobalService } from '../../services/global.service';
 
 @Component({
   selector: 'app-theme-manager',

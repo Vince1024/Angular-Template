@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { AuthenticationService } from '../services/authentication.service';
+import { Component } from '@angular/core';
+import { AuthenticationService } from '../../services/authentication.service';
 import { FormControl, Validators } from '@angular/forms';
 
 @Component({
@@ -8,7 +8,7 @@ import { FormControl, Validators } from '@angular/forms';
   styleUrl: './authentication.component.scss'
 })
 
-export class AuthenticationComponent implements OnInit {
+export class AuthenticationComponent {
 
   username: string = '';
   password: string = '';
@@ -18,20 +18,14 @@ export class AuthenticationComponent implements OnInit {
   StrongPasswordRegx: RegExp = /^(?=[^A-Z]*[A-Z])(?=[^a-z]*[a-z])(?=\D*\d)(?=.*[!@#$%^&*]).+$/;
   passFormControl = new FormControl('', [Validators.required, Validators.minLength(12), Validators.pattern(this.StrongPasswordRegx)]);
 
-  constructor(private authenticationService: AuthenticationService) {
-
-  }
-
-  ngOnInit(): void {
-
-  }
+  constructor(private authenticationService: AuthenticationService) { }
 
   signIn() {
     this.authenticationService.signIn(this.username, this.password)
   }
 
-  // signOut(user: string) {
-  //   this.authenticationService.signOut(user);
-  // }
+  keyEnterPressed(name: string) {
+    console.log(name + ' has been pressed')
+  }
 
 }

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { MatRadioChange } from '@angular/material/radio';
-import { GlobalService } from '../services/global.service';
+import { GlobalService } from '../../services/global.service';
 
 @Component({
   selector: 'app-language-manager',

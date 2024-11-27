@@ -8,9 +8,9 @@
                     <mat-form-field [style.width.px]=400>
                         <mat-label>User Name</mat-label>
                         
-                        <input matInput type="text" (keydown.enter)="$event.preventDefault()" [formControl]="nameFormControl" [(ngModel)]="username" name="User">
-                        @if (username) {
-                            <button matSuffix mat-icon-button aria-label="Clear" (click)="username=''">
+                        <input matInput type="text" (keydown.enter)="$event.preventDefault()" [formControl]="nameFormControl">
+                        @if (this.nameFormControl.value) {
+                            <button matSuffix mat-icon-button aria-label="Clear" (click)="clearUsername()">
                             <mat-icon>close</mat-icon>
                             </button>
                         }
@@ -23,9 +23,9 @@
                     <mat-form-field [style.width.px]=400>
                         <mat-label>Password</mat-label>
                         
-                        <input matInput type="password" (keydown.enter)="$event.preventDefault()" [formControl]="passFormControl" [(ngModel)]="password" name="Pass">
-                        @if (password) {
-                            <button matSuffix mat-icon-button aria-label="Clear" (click)="password=''">
+                        <input matInput type="password" (keydown.enter)="$event.preventDefault()" [formControl]="passFormControl">
+                        @if (this.passFormControl.value) {
+                            <button matSuffix mat-icon-button aria-label="Clear" (click)="clearPassword()">
                             <mat-icon>close</mat-icon>
                             </button>
                         }

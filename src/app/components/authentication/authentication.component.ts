@@ -21,7 +21,19 @@ export class AuthenticationComponent {
   constructor(private authenticationService: AuthenticationService) { }
 
   signIn() {
+    console.log(this.nameFormControl.value);
+    this.username = this.nameFormControl.value || '';
+    this.password = this.passFormControl.value || '';
+
     this.authenticationService.signIn(this.username, this.password)
+  }
+
+  clearUsername() {
+    this.nameFormControl.setValue('');
+  }
+
+  clearPassword() {
+    this.passFormControl.setValue('');
   }
 
   keyEnterPressed(name: string) {

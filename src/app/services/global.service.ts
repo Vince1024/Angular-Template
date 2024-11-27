@@ -20,20 +20,22 @@ export class GlobalService {
     title: 'Angular Template',
     version: '1.0.0',
 
-    currentUser: '',
+    User: '',
     isAuth: false,
-    currentLanguage: '',
-    currentTheme: 'azure-blue'
+    userLanguage: '',
+    userTheme: 'azure-blue'
   });
 
   loadLocalStorage() {
-    this.Vars.value.currentLanguage = (this.localStorageService.get('currentLanguage') || 'en-US');
-    this.Vars.value.currentTheme = (this.localStorageService.get('currentTheme') || 'azure-blue');
+    this.Vars.value.userLanguage = (this.localStorageService.get('userLanguage') || 'en-US');
+    this.Vars.value.userTheme = (this.localStorageService.get('userTheme') || 'azure-blue');
+    this.logger.log(logLevel.Info, 'LocalStorage Loaded', GlobalService.name);
   }
   
   saveLocalStorage() {
-    this.localStorageService.set('currentLanguage', this.Vars.value.currentLanguage);
-    this.localStorageService.set('currentTheme', this.Vars.value.currentTheme);
+    this.localStorageService.set('userLanguage', this.Vars.value.userLanguage);
+    this.localStorageService.set('userTheme', this.Vars.value.userTheme);
+    this.logger.log(logLevel.Info, 'LocalStorage Saved', GlobalService.name);
   }
 
 }

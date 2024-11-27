@@ -11,7 +11,6 @@ import { GlobalService } from '../../services/global.service';
 
 export class LanguageManagerComponent {
 
-  //currentLang: string;
   installedLanguages: string[];
 
   constructor(
@@ -25,12 +24,12 @@ export class LanguageManagerComponent {
     this.translate.setDefaultLang('en-US');
 
     this.installedLanguages = this.getInstalledLanguages();
-    this.switchLanguage(this.globalService.Vars.value.currentLanguage ||'en-US');
+    this.switchLanguage(this.globalService.Vars.value.userLanguage ||'en-US');
   }
   
   switchLanguage(language: string) {
     this.translate.use(language);
-    this.globalService.Vars.value.currentLanguage = language;
+    this.globalService.Vars.value.userLanguage = language;
     this.globalService.saveLocalStorage();
   }
   

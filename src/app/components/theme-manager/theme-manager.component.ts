@@ -45,16 +45,13 @@ export class ThemeManagerComponent {
   }
 
   initialize() {
-    this.themeService.setTheme(this.globalService.Vars.value.currentTheme, this.renderer2);
+    this.themeService.setTheme(this.globalService.Vars.value.userTheme, this.renderer2);
   }
 
   changeTheme(theme: Theme) {
-    if (theme != this.globalService.Vars.value.currentTheme)
-    {
     this.themeService.setTheme(theme, this.renderer2);
-    this.globalService.Vars.value.currentTheme = theme;
+    this.globalService.Vars.value.userTheme = theme;
     this.globalService.saveLocalStorage();
-    }
   }
 
   radioChange(event: MatRadioChange) {

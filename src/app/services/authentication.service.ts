@@ -19,7 +19,7 @@ export class AuthenticationService {
         return new Promise(
             (resolve, reject) => {
                 setTimeout(() => {
-                    this.globalService.Vars.value.currentUser = user;
+                    this.globalService.Vars.value.user = user;
                     this.globalService.Vars.value.isAuth = true;
                     this.logger.log(logLevel.Info, 'Authentication Success for user [' + user + ']', AuthenticationService.name);
                     this.router.navigate(['template']);
@@ -31,7 +31,7 @@ export class AuthenticationService {
     }
 
     signOut(user: string) {
-        this.globalService.Vars.value.currentUser = '';
+        this.globalService.Vars.value.user = '';
         this.globalService.Vars.value.isAuth = false;
         this.logger.log(logLevel.Info, 'Logout Success for user [' + user + ']', AuthenticationService.name);
         this.router.navigate(['authentication']);

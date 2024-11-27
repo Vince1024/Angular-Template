@@ -1,6 +1,5 @@
 import { Injectable, inject } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
-import { LoggerService, logLevel } from './logger.service';
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +8,7 @@ import { LoggerService, logLevel } from './logger.service';
 export class LocalStorageService {
   private readonly localStorage = inject(DOCUMENT)?.defaultView?.localStorage;
 
-  constructor (private logger: LoggerService) {
+  constructor () {
     
   }
 
@@ -19,13 +18,11 @@ export class LocalStorageService {
     if (!item) {
       return null;
     }
-    this.logger.log(logLevel.Info, 'LocalStorage Loaded', LocalStorageService.name);
     return this.isJSONValid(item) ? (JSON.parse(item) as T) : (item as T);
   }
 
   set(key: string, value: unknown): void {
     this.localStorage?.setItem(key, JSON.stringify(value));
-    this.logger.log(logLevel.Info, 'LocalStorage Saved', LocalStorageService.name);
   }
 
   remove(key: string): void {

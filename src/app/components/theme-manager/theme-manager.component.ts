@@ -1,6 +1,5 @@
 import { Component, Renderer2 } from '@angular/core';
-import { Theme } from '../../class/theme';
-import { ThemeService } from '../../services/theme.service';
+import { ThemeService, Theme } from '../../services/theme.service';
 import { MatRadioChange } from '@angular/material/radio';
 import { GlobalService } from '../../services/global.service';
 
@@ -50,9 +49,12 @@ export class ThemeManagerComponent {
   }
 
   changeTheme(theme: Theme) {
+    if (theme != this.globalService.Vars.value.currentTheme)
+    {
     this.themeService.setTheme(theme, this.renderer2);
-    this.globalService.Vars.value.currentTheme = this.themeService.currentTheme;
+    this.globalService.Vars.value.currentTheme = theme;
     this.globalService.saveLocalStorage();
+    }
   }
 
   radioChange(event: MatRadioChange) {

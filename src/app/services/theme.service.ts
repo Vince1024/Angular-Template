@@ -1,6 +1,23 @@
 import { DOCUMENT } from '@angular/common';
 import { Inject, Injectable, Renderer2 } from '@angular/core';
-import { Theme } from '../class/theme';;
+import { LoggerService, logLevel } from './logger.service';
+
+export enum Theme {
+  AZURE_BLUE = 'azure-blue',
+  CYAN_ORANGE = 'cyan-orange',
+  DEEPPURPLE_AMBER = 'deeppurple-amber',
+  INDOGO_PINK = 'indigo-pink',
+  MAGENTA_VIOLET = 'magenta-violet',
+  PINK_BLUEGREY = 'pink-bluegrey',
+  PURPLE_GREEN = 'purple-green',
+  ROSE_RED = 'rose-red',
+  RED_LIGHT = 'red-light',
+  RED_DARK = 'red-dark',
+  GERRN_LIGHT = 'green-light',
+  GREEN_DARK = 'green-dark',
+  BLUE_LIGHT = 'blue-light',
+  BLUE_DARK = 'blue-dark'
+}
 
 @Injectable({
   providedIn: 'root'
@@ -12,10 +29,8 @@ export class ThemeService {
   private themeCSSID: string = 'themeCSS';
 
   constructor(
-    @Inject(DOCUMENT) private document: Document
+    @Inject(DOCUMENT) private document: Document, private logger: LoggerService
   ) { }
-
-  currentTheme: string | undefined;
 
   setTheme(theme: Theme, renderer2: Renderer2) {
     this.cssFile = `${theme}.css`;
@@ -32,7 +47,7 @@ export class ThemeService {
     // Add the style to the head section
     renderer2.appendChild(this.document.head, this.style);
 
-    this.currentTheme = theme;
+    this.logger.log(logLevel.Info, 'Theme Set to [' + theme + ']', ThemeService.name);
   }
 
   removeExistingThemeStyle(renderer2: Renderer2, themeCSSID: string) {

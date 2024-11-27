@@ -3,6 +3,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DatePipe } from '@angular/common';
 
 // import Material Design
 import { MatButton, MatButtonModule } from '@angular/material/button';
@@ -26,7 +27,7 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 
-//Global
+// Global
 import { AuthenticationComponent } from './components/authentication/authentication.component';
 import { MainTopMenuComponent } from './components/main-top-menu/main-top-menu.component';
 import { ThemeManagerComponent } from './components/theme-manager/theme-manager.component';
@@ -74,7 +75,8 @@ import { TemplateComponent } from './components/template/template.component';
   ],
   providers: [
     provideAnimationsAsync(),
-    provideHttpClient(withInterceptorsFromDi())
+    provideHttpClient(withInterceptorsFromDi(),),
+    DatePipe
   ],
   bootstrap: [AppComponent]
 })

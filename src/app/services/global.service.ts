@@ -1,6 +1,7 @@
 import { inject, Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, timestamp } from 'rxjs';
 import { LocalStorageService } from './local-storage.service';
+import { LoggerService, logLevel } from './logger.service';
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +11,7 @@ export class GlobalService {
   
   private readonly localStorageService = inject(LocalStorageService);
 
-  constructor(
+  constructor(private logger: LoggerService
   ){
     this.loadLocalStorage();
   }

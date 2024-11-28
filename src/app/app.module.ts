@@ -34,7 +34,6 @@ import { ThemeManagerComponent } from './components/theme-manager/theme-manager.
 import { LanguageManagerComponent } from './components/language-manager/language-manager.component';
 import { TemplateComponent } from './components/template/template.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,7 +41,7 @@ import { TemplateComponent } from './components/template/template.component';
     MainTopMenuComponent,
     LanguageManagerComponent,
     TemplateComponent,
-    ThemeManagerComponent
+    ThemeManagerComponent,
   ],
   imports: [
     AppRoutingModule,

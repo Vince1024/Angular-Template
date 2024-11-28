@@ -15,6 +15,7 @@ export class GlobalService {
 
   constructor(private logger: LoggerService
   ){
+    //this.localStorageService.clear();
     this.loadLocalStorage();
   }
 
@@ -25,26 +26,17 @@ export class GlobalService {
     version: '1.0.0',
 
     user: this.usr
-    // User: '',
-    // isAuth: false,
-    // userLanguage: '',
-    // userTheme: 'azure-blue'
   });
 
   loadLocalStorage() {
     this.Vars.value.user.language = (this.localStorageService.get('user.language') || 'en-US');
     this.Vars.value.user.theme = (this.localStorageService.get('user.theme') || 'azure-blue');
-    // this.Vars.value.userLanguage = (this.localStorageService.get('userLanguage') || 'en-US');
-    // this.Vars.value.userTheme = (this.localStorageService.get('userTheme') || 'azure-blue');
-    console.log(this.Vars.value.user);
     this.logger.log(logLevel.Info, 'LocalStorage Loaded', GlobalService.name);
   }
   
   saveLocalStorage() {
     this.localStorageService.set('user.language', this.Vars.value.user.language);
     this.localStorageService.set('user.theme', this.Vars.value.user.theme);
-    // this.localStorageService.set('userLanguage', this.Vars.value.userLanguage);
-    // this.localStorageService.set('userTheme', this.Vars.value.userTheme);
     this.logger.log(logLevel.Info, 'LocalStorage Saved', GlobalService.name);
   }
 

@@ -1,24 +1,21 @@
+import { Roles } from "./roles";
 
 export type User = {
   
-    name: string;
-    id: string;
-    firstName: string;
-    lastName: string;
-    email: string;
-    picture: string;
+    loginName: string;
+    isAuth: boolean;
+    userId?: string;
+    firstName?: string;
+    lastName?: string;
+    email?: string;
+    phoneNumber?: string
+    picture?: string;
   
-    language: string;
-    theme: string;
+    language?: string;
+    theme?: string;
   
     role: Roles;
-    lastAccess: Date;
+    lastAccess?: Date;
   
   }
 
-export enum Roles {
-    ADMIN = 'ADMIN',
-    SUPER_USER = 'SUPER_USER',
-    USER = 'USER',
-    VIEWER = 'VIEWER',
-  }

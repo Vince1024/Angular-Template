@@ -3,7 +3,7 @@
     <!-- <p>{{ this.globalService.Vars.value.userTheme }}</p> -->
     <mat-radio-group aria-label="Select an option">
         <div *ngFor="let theme of themeArr">
-            <mat-radio-button [value]="theme" (change)="radioChange($event)" [checked]="theme === this.globalService.Vars.value.userTheme">{{ theme }}</mat-radio-button>
+            <mat-radio-button [value]="theme" (change)="radioChange($event)" [checked]="theme === this.globalService.Vars.value.user.theme">{{ theme }}</mat-radio-button>
         </div>
     </mat-radio-group>
 </div>

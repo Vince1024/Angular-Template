@@ -45,12 +45,12 @@ export class ThemeManagerComponent {
   }
 
   initialize() {
-    this.themeService.setTheme(this.globalService.Vars.value.userTheme, this.renderer2);
+    this.themeService.setTheme(this.globalService.Vars.value.user.theme, this.renderer2);
   }
 
   changeTheme(theme: Theme) {
     this.themeService.setTheme(theme, this.renderer2);
-    this.globalService.Vars.value.userTheme = theme;
+    this.globalService.Vars.value.user.theme = theme;
     this.globalService.saveLocalStorage();
   }
 

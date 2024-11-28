@@ -33,9 +33,10 @@ export class GlobalService {
 
   loadLocalStorage() {
     this.Vars.value.user.language = (this.localStorageService.get('user.language') || 'en-US');
-    this.Vars.value.user.theme = (this.localStorageService.get('user.theme') || 'en-US');
+    this.Vars.value.user.theme = (this.localStorageService.get('user.theme') || 'azure-blue');
     // this.Vars.value.userLanguage = (this.localStorageService.get('userLanguage') || 'en-US');
     // this.Vars.value.userTheme = (this.localStorageService.get('userTheme') || 'azure-blue');
+    console.log(this.Vars.value.user);
     this.logger.log(logLevel.Info, 'LocalStorage Loaded', GlobalService.name);
   }
   

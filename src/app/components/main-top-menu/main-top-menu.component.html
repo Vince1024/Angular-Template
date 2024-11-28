@@ -27,9 +27,9 @@
       <mat-icon>person_outline</mat-icon>
     </button>
     <mat-menu #user_menu="matMenu">
-      <button mat-menu-item disabled>
-        <mat-icon>settings</mat-icon>
-        <span>Settings</span>
+      <button mat-menu-item [disabled]="this.globalService.Vars.value.isAuth === false">
+        <mat-icon>account_box</mat-icon>
+        <span>Profil</span>
       </button>
       <button mat-menu-item [disabled]="this.globalService.Vars.value.isAuth === false" (click)="logOut(this.globalService.Vars.value.user)">
         <mat-icon>exit_to_app</mat-icon>

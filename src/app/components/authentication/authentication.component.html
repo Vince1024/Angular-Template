@@ -8,7 +8,7 @@
                     <mat-form-field [style.width.px]=400>
                         <mat-label>User Name</mat-label>
                         
-                        <input matInput type="text" (keydown.enter)="$event.preventDefault()" [formControl]="nameFormControl">
+                        <input autofocus matInput type="text" (keydown.enter)="keyEnterPressed('name')" [formControl]="nameFormControl">
                         @if (this.nameFormControl.value) {
                             <button matSuffix mat-icon-button aria-label="Clear" (click)="clearUsername()">
                             <mat-icon>close</mat-icon>
@@ -23,7 +23,7 @@
                 <p>
                     <mat-form-field [style.width.px]=400>
                         <mat-label>Enter your password</mat-label>
-                        <input matInput [type]="hide() ? 'password' : 'text'" [formControl]="passFormControl">
+                        <input matInput [type]="hide() ? 'password' : 'text'" (keydown.enter)="keyEnterPressed('pass')" [formControl]="passFormControl">
                         <button matSuffix mat-icon-button (click)="clickEvent($event)" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide()"> 
                         <mat-icon>{{hide() ? 'visibility_off' : 'visibility'}}</mat-icon></button>
                         @if (this.passFormControl.value) {

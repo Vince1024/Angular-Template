@@ -1,15 +1,29 @@
-// :host {
-//     // display: flex;
-//     // justify-content: center;
-//     margin: 10px;
-//     padding: 10px;
+// table, td {
+//     border: 1px solid black;
+//     // border-collapse: collapse;
 //   }
 
-img {
+.pic {
     border-radius: 50%;
     height: 100px;
     width: 100px;
   }
+
+.name {
+    padding: 10px;
+    padding-bottom: 5px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: left;
+    vertical-align: top;
+}
+
+.details {
+    padding: 10px;
+    padding-top: 5px;
+    text-align: left;
+    vertical-align: top;
+}
 
 .mat-badge-content {
     font-family: 'Material Icons';
@@ -18,4 +32,8 @@ img {
 mat-form-field  {
     // height: 60px;
     width: 500px;
+}
+
+mat-card {
+    width: 550px;
 }

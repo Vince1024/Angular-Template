@@ -1,37 +1,55 @@
-
 <div class="content">
-    <mat-card appearance="outlined">
-        <mat-card-title>User Information</mat-card-title>
+    <td>
+        <mat-card appearance="outlined">
+            <mat-card-title>User Information</mat-card-title>
+            <mat-card-content>
+                <!-- <form> -->
+                    <br>
+                    <!-- <div matBadge="person" matBadgePosition="below" matBadgeOverlap="false" >Text with a badge</div> -->
+                    <table width="500">
+                        <tr class="head">
+                            <td class="pic" rowspan="2"><img class="pic" mat-card-md-image
+                                    src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="User picture">
+                            </td>
+                            <td class="name" height="20">Vincent PAPUCHON</td>
+                        </tr>
+                        <tr>
+                            <td class="details">User Role: {{ this.globalService.Vars.value.user.role }}</td>
+                        </tr>
+                    </table>
+                    <br>
+                    <mat-form-field><mat-label>Login Name</mat-label><input matInput
+                            value="{{ this.globalService.Vars.value.user.login_Name }}"></mat-form-field><br><br>
+                    <mat-form-field><mat-label>First Name</mat-label><input matInput
+                            value="{{ this.globalService.Vars.value.user.first_Name }}"></mat-form-field><br><br>
+                    <mat-form-field><mat-label>Last Name</mat-label><input matInput
+                            value="{{ this.globalService.Vars.value.user.last_Name }}"></mat-form-field><br><br>
+                    <mat-form-field><mat-label>Email</mat-label><input matInput
+                            value="{{ this.globalService.Vars.value.user.email }}"></mat-form-field><br><br>
+                    <mat-form-field><mat-label>Phone</mat-label><input matInput type="tel"
+                            value="{{ this.globalService.Vars.value.user.phone }}"></mat-form-field><br><br>
+                    <mat-form-field><mat-label>Role</mat-label><input disabled="true" matInput
+                            value="{{ this.globalService.Vars.value.user.role }}"></mat-form-field><br><br>
+                <!-- </form> -->
+            </mat-card-content>
+        </mat-card>
+    </td>
+
+    <td>
+        <mat-card appearance="outlined">
+            <mat-card-title>Language</mat-card-title>
             <mat-card-content>
                 <form>
-                <!-- <table>
-                    <tr>
-                        <td><img mat-card-md-image src="https://material.angular.io/assets/img/examples/shiba2.jpg"  alt="User picture"></td>
-                        <td><h2>Vincent PAPUCHON</h2></td>
-                        <td>rien</td>
-                      </tr>
-                      <tr>
-                        <td><mat-label>Login Name : </mat-label></td>
-                        <td><mat-form-field><input matInput value="{{ this.globalService.Vars.value.user.loginName }}"></mat-form-field></td>
-                        <td>rien non plu</td>
-                      </tr>
-                      <tr>
-                        <td>Février</td>
-                        <td>10.01.2014</td>
-                      </tr>
-                </table> -->
-
-                <br>
-                <!-- <div matBadge="person" matBadgePosition="below" class="demo-section">Text with a badge</div>
-                <br> -->
-                <img mat-card-md-image src="https://material.angular.io/assets/img/examples/shiba2.jpg"  alt="User picture">
-                <h2>Vincent PAPUCHON</h2>
-                <mat-form-field><mat-label>Login Name</mat-label><input matInput value="{{ this.globalService.Vars.value.user.login_Name }}"></mat-form-field><br><br>
-                <mat-form-field><mat-label>First Name</mat-label><input matInput value="{{ this.globalService.Vars.value.user.first_Name }}"></mat-form-field><br><br>
-                <mat-form-field><mat-label>Last Name</mat-label><input matInput value="{{ this.globalService.Vars.value.user.last_Name }}"></mat-form-field><br><br>
-                <mat-form-field><mat-label>Email</mat-label><input matInput value="{{ this.globalService.Vars.value.user.email }}"></mat-form-field><br><br>
-                <mat-form-field><mat-label>Phone</mat-label><input matInput type="tel" value="{{ this.globalService.Vars.value.user.phone }}"></mat-form-field><br><br>
-            </form>
+                    <app-language-manager></app-language-manager>
+                </form>
             </mat-card-content>
-    </mat-card>
+        </mat-card>
+        <mat-card appearance="outlined">
+            <mat-card-title>Theme</mat-card-title>
+            <mat-card-content>
+                <app-theme-manager></app-theme-manager>
+            </mat-card-content>
+        </mat-card>
+    </td>
+
 </div>

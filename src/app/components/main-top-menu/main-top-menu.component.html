@@ -31,7 +31,7 @@
         <mat-icon>account_box</mat-icon>
         <span>Profil</span>
       </button>
-      <button mat-menu-item [disabled]="this.globalService.Vars.value.user.isAuth === false" (click)="logOut(this.globalService.Vars.value.user.loginName)">
+      <button mat-menu-item [disabled]="this.globalService.Vars.value.user.isAuth === false" (click)="logOut(this.globalService.Vars.value.user.login_Name)">
         <mat-icon>exit_to_app</mat-icon>
         <span>Logout</span>
       </button>

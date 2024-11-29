@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { AuthenticationService } from '../../services/authentication.service';
 import { FormControl, Validators } from '@angular/forms';
 
@@ -9,6 +9,12 @@ import { FormControl, Validators } from '@angular/forms';
 })
 
 export class AuthenticationComponent {
+
+  hide = signal(true);
+  clickEvent(event: MouseEvent) {
+    this.hide.set(!this.hide());
+    event.stopPropagation();
+  }
 
   username: string = '';
   password: string = '';

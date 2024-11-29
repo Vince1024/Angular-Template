@@ -2,11 +2,11 @@ import { Roles } from "./roles";
 
 export type User = {
   
-    loginName: string;
+    login_Name: string;
     isAuth: boolean;
-    userId?: string;
-    firstName?: string;
-    lastName?: string;
+    Id?: string;
+    first_Name?: string;
+    last_Name?: string;
     email?: string;
     phoneNumber?: string
     picture?: string;

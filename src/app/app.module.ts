@@ -6,6 +6,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DatePipe } from '@angular/common';
 
 // import Material Design
+import { MatBadgeModule } from '@angular/material/badge';
 import { MatButton, MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatCheckboxModule } from '@angular/material/checkbox';
@@ -57,6 +58,7 @@ import { UserComponent } from './components/user/user.component';
                 deps: [HttpClient]
                 }
     }),
+    MatBadgeModule,
     MatButton,
     MatButtonModule,
     MatCardModule,

@@ -19,7 +19,7 @@ export class GlobalService {
     this.loadLocalStorage();
   }
 
-  public usr: User = { loginName: '', isAuth: false, role: Roles.NONE };
+  public usr: User = { login_Name: '', isAuth: false, role: Roles.NONE };
 
   public Vars = new BehaviorSubject<any>({
     title: 'Angular Template',

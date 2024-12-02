@@ -41,10 +41,6 @@
       <mat-icon>more_vert</mat-icon>
     </button>
     <mat-menu #app_menu="matMenu">
-      <button mat-menu-item [matMenuTriggerFor]="lang_menu">
-        <mat-icon>language</mat-icon>
-        <span>Language</span>
-      </button>
       <button mat-menu-item [matMenuTriggerFor]="theme_menu">
         <mat-icon>palette</mat-icon>
         <span>Theme</span>
@@ -53,10 +49,6 @@
         <mat-icon>info</mat-icon>
         <span>About</span>
       </button>
-    </mat-menu>
-
-    <mat-menu #lang_menu="matMenu">
-      <app-language-manager></app-language-manager>
     </mat-menu>
 
     <mat-menu #theme_menu="matMenu">

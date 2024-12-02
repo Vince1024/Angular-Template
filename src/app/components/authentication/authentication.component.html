@@ -1,53 +1,72 @@
-
 <mat-card appearance="outlined">
-    <mat-card-title>{{ "login.title" | translate }}</mat-card-title>
-        <mat-card-content>
-            <form>
-                <br>
-                <p>
-                    <mat-form-field [style.width.px]=400>
-                        <mat-label>{{ "login.userName" | translate }}</mat-label>
-                        
-                        <input autofocus matInput type="text" (keydown.enter)="keyEnterPressed('name')" [formControl]="nameFormControl">
-                        @if (this.nameFormControl.value) {
-                            <button matSuffix mat-icon-button aria-label="Clear" (click)="clearUsername()">
-                            <mat-icon>close</mat-icon>
-                            </button>
-                        }
-                        @if (nameFormControl.hasError('required')) {
-                            <mat-error>{{ "login.userName" | translate }} <strong>{{ "login.userNameError" | translate }}</strong></mat-error>
-                          }
-                    </mat-form-field>
-                </p>
 
-                <p>
-                    <mat-form-field [style.width.px]=400>
-                        <mat-label>{{ "login.password" | translate }}</mat-label>
-                        <input matInput [type]="hide() ? 'password' : 'text'" (keydown.enter)="keyEnterPressed('pass')" [formControl]="passFormControl">
-                        <button matSuffix mat-icon-button (click)="clickEvent($event)" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide()"> 
+    <mat-card-header>
+        <mat-card-title>{{ "login.title" | translate }}</mat-card-title>
+        <span class="spacer"></span>
+        <mat-icon color="primary">verified_user</mat-icon>
+    </mat-card-header>
+    <mat-card-content>
+        <form>
+            <br>
+            <p>
+                <mat-form-field [style.width.px]=400>
+                    <mat-label>{{ "login.userName" | translate }}</mat-label>
+
+                    <input autofocus matInput type="text" (keydown.enter)="keyEnterPressed('name')"
+                        [formControl]="nameFormControl">
+                    @if (this.nameFormControl.value) {
+                    <button matSuffix mat-icon-button aria-label="Clear" (click)="clearUsername()">
+                        <mat-icon>close</mat-icon>
+                    </button>
+                    }
+                    @if (nameFormControl.hasError('required')) {
+                    <mat-error>{{ "login.userName" | translate }} <strong>{{ "login.userNameError" | translate
+                            }}</strong></mat-error>
+                    }
+                </mat-form-field>
+            </p>
+
+            <p>
+                <mat-form-field [style.width.px]=400>
+                    <mat-label>{{ "login.password" | translate }}</mat-label>
+                    <input matInput [type]="hide() ? 'password' : 'text'" (keydown.enter)="keyEnterPressed('pass')"
+                        [formControl]="passFormControl">
+                    <button matSuffix mat-icon-button (click)="clickEvent($event)" [attr.aria-label]="'Hide password'"
+                        [attr.aria-pressed]="hide()">
                         <mat-icon>{{hide() ? 'visibility_off' : 'visibility'}}</mat-icon></button>
-                        @if (this.passFormControl.value) {
-                            <button matSuffix mat-icon-button aria-label="Clear" (click)="clearPassword()">
-                            <mat-icon>close</mat-icon></button>
-                        }
-                        @if (passFormControl.hasError('required')) {
-                            <mat-error>{{ "login.password" | translate }} <strong>{{ "login.passwordError#1" | translate }}</strong></mat-error>
-                          }
-                        @if (passFormControl.hasError('minlength')) {
-                            <mat-error>{{ "login.passwordError#2" | translate }} <strong>12</strong></mat-error>
-                        }
-                        @if (passFormControl.hasError('pattern')) {
-                            <mat-error>{{ "login.password" | translate }} <strong>{{ "login.passwordError#3" | translate }}</strong></mat-error>
-                        }
-                      </mat-form-field>
-                </p>
+                    @if (this.passFormControl.value) {
+                    <button matSuffix mat-icon-button aria-label="Clear" (click)="clearPassword()">
+                        <mat-icon>close</mat-icon></button>
+                    }
+                    @if (passFormControl.hasError('required')) {
+                    <mat-error>{{ "login.password" | translate }} <strong>{{ "login.passwordError#1" | translate
+                            }}</strong></mat-error>
+                    }
+                    @if (passFormControl.hasError('minlength')) {
+                    <mat-error>{{ "login.passwordError#2" | translate }} <strong>12</strong></mat-error>
+                    }
+                    @if (passFormControl.hasError('pattern')) {
+                    <mat-error>{{ "login.password" | translate }} <strong>{{ "login.passwordError#3" | translate
+                            }}</strong></mat-error>
+                    }
+                </mat-form-field>
+            </p>
 
-                <div class="button">
-                    <button mat-raised-button (click)="signIn()" [disabled]="nameFormControl.errors || passFormControl.errors">{{ "login.btn.login" | translate }}</button>
-              </div>
+            <div class="button">
+                <button mat-raised-button (click)="signIn()"
+                    [disabled]="nameFormControl.errors || passFormControl.errors">{{ "login.btn.login" | translate
+                    }}</button>
+            </div>
 
-              <a>{{ "language.selection" | translate }}</a>
+            
+            <button mat-icon-button [matMenuTriggerFor]="lang_menu" aria-label="icon-button with a menu">
+                <mat-icon>language</mat-icon>
+              </button>
 
-            </form>
-        </mat-card-content>
+            <mat-menu #lang_menu="matMenu">
+                <app-language-manager></app-language-manager>
+            </mat-menu>
+
+        </form>
+    </mat-card-content>
 </mat-card>

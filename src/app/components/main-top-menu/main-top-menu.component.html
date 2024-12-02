@@ -7,7 +7,7 @@
     <mat-menu #main_menu="matMenu">
       <button mat-menu-item routerLink="/template">
         <mat-icon>home</mat-icon>
-        <span>Home</span>
+        <span>{{ "topMenu.home" | translate }}</span>
       </button>
     </mat-menu>
 
@@ -29,11 +29,11 @@
     <mat-menu #user_menu="matMenu">
       <button mat-menu-item [disabled]="this.globalService.Vars.value.user.isAuth === false" routerLink="/user">
         <mat-icon>account_box</mat-icon>
-        <span>Profil</span>
+        <span>{{ "topMenu.profil" | translate }}</span>
       </button>
       <button mat-menu-item [disabled]="this.globalService.Vars.value.user.isAuth === false" (click)="logOut(this.globalService.Vars.value.user.login_Name)">
         <mat-icon>exit_to_app</mat-icon>
-        <span>Logout</span>
+        <span>{{ "topMenu.logout" | translate }}</span>
       </button>
     </mat-menu>
   

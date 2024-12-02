@@ -7,7 +7,7 @@
     
     "topMenu": {
         "home": "Accueil",
-        "user.profil": "Profil",
+        "profil": "Profil",
         "logout": "Déconnexion"
     },
 
@@ -40,6 +40,8 @@
         "role": "Rôle"
     },
 
+    "language": "Langue",
     "language.selection": "Sélectionnez une langue",
+    "theme": "Thème",
     "theme.selection": "Sélectionnez un thème"
 }

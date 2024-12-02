@@ -34,7 +34,7 @@
         "title": "Utilisateur",
         "login": "Nom d'utilisateur",
         "firstName": "Prénom",
-        "lastName": "Nom de famille",
+        "lastName": "Nom",
         "email": "Email",
         "phone": "Téléphone",
         "role": "Rôle"

@@ -2,7 +2,7 @@
     <td>
         <mat-card appearance="outlined">
             <mat-card-header>
-                <mat-card-title>User Information</mat-card-title>
+                <mat-card-title>{{ "user.title" | translate }}</mat-card-title>
                 <span class="spacer"></span>
                 <mat-icon color="primary">account_box</mat-icon>
             </mat-card-header>
@@ -17,21 +17,21 @@
                         <td class="name" height="20">Vincent PAPUCHON</td>
                     </tr>
                     <tr>
-                        <td class="details">User Role: {{ this.globalService.Vars.value.user.role }}</td>
+                        <td class="details">{{ "user.role" | translate }}: {{ this.globalService.Vars.value.user.role }}</td>
                     </tr>
                 </table>
                 <br>
-                <mat-form-field><mat-label>Login Name</mat-label><input matInput
+                <mat-form-field><mat-label>{{ "user.login" | translate }}</mat-label><input matInput
                         value="{{ this.globalService.Vars.value.user.login_Name }}"></mat-form-field><br><br>
-                <mat-form-field><mat-label>First Name</mat-label><input matInput
+                <mat-form-field><mat-label>{{ "user.firstName" | translate }}</mat-label><input matInput
                         value="{{ this.globalService.Vars.value.user.first_Name }}"></mat-form-field><br><br>
-                <mat-form-field><mat-label>Last Name</mat-label><input matInput
+                <mat-form-field><mat-label>{{ "user.lastName" | translate }}</mat-label><input matInput
                         value="{{ this.globalService.Vars.value.user.last_Name }}"></mat-form-field><br><br>
-                <mat-form-field><mat-label>Email</mat-label><input matInput
+                <mat-form-field><mat-label>{{ "user.email" | translate }}</mat-label><input matInput
                         value="{{ this.globalService.Vars.value.user.email }}"></mat-form-field><br><br>
-                <mat-form-field><mat-label>Phone</mat-label><input matInput type="tel"
+                <mat-form-field><mat-label>{{ "user.phone" | translate }}</mat-label><input matInput type="tel"
                         value="{{ this.globalService.Vars.value.user.phone }}"></mat-form-field><br><br>
-                <mat-form-field><mat-label>Role</mat-label><input disabled="true" matInput
+                <mat-form-field><mat-label>{{ "user.role" | translate }}</mat-label><input disabled="true" matInput
                         value="{{ this.globalService.Vars.value.user.role }}"></mat-form-field><br><br>
             </mat-card-content>
         </mat-card>

@@ -1,15 +1,44 @@
 {
+    "btn.ok": "Ok",
+    "btn.cancel": "Cancelar",
+    "btn.exit": "Salir",
+    "btn.yes": "Sí",
+    "btn.no": "No",
+    
+    "topMenu": {
+        "home": "Inicio",
+        "user.profil": "Perfil",
+        "logout": "Cerrar sesión"
+    },
+
+    "login": { 
+        "title": "Autenticación", 
+        "userName": "Usuario", 
+        "userNameError": "es requerido", 
+        "password": "Contraseña", 
+        "passwordError#1": "es requerido", 
+        "passwordError#2": "la longitud debe ser al menos", 
+        "passwordError#3": "complejidad insuficiente", 
+        "btn.login": "Iniciar sesión"
+    },
+
     "languages": {
         "de-DE": "Alemán",
         "en-US": "Inglés",
         "es-ES": "Español",
         "fr-FR": "Francés"
     },
-    
-    "btn.ok": "Aceptar",
-    "btn.cancel": "Cancelar",
-    "btn.exit": "Irse",
 
-    "language.selection": "Seleccione un idioma",
+    "user": {
+        "title": "Usuario",
+        "login": "Nombre de usuario",
+        "firstName": "Nombre",
+        "lastName": "Apellido",
+        "email": "Correo electrónico",
+        "phone": "Teléfono",
+        "role": "Rol"
+    },
+
+    "language.selection": "Selecciona un idioma",
     "theme.selection": "Selecciona un tema"
 }

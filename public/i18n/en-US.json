@@ -1,4 +1,28 @@
 {
+    "btn.ok": "Ok",
+    "btn.cancel": "Cancel",
+    "btn.exit": "Exit",
+    "btn.yes": "Yes",
+    "btn.no": "No",
+    
+    "topMenu": {
+        "home": "Home",
+        "user.profil": "Profil",
+        "logout": "Logout",
+        "about": "About"
+    },
+
+    "login": {
+        "title": "Authentication",
+        "userName": "Login",
+        "userNameError": "is required",
+        "password": "Password",
+        "passwordError#1": "is required",
+        "passwordError#2": "length must be at least",
+        "passwordError#3": "insufisant complexity",
+        "btn.login": "Login"
+    },
+
     "languages": {
         "de-DE": "German",
         "en-US": "English",
@@ -6,10 +30,18 @@
         "fr-FR": "French"
     },
 
-    "btn.ok": "Ok",
-    "btn.cancel": "Cancel",
-    "btn.exit": "Exit",
+    "user": {
+        "title": "User",
+        "login": "Login Name",
+        "firstName": "First Name",
+        "lastName": "Last Name",
+        "email": "Email",
+        "phone": "Phone",
+        "role": "Role"
+    },
 
+    "language": "Language",
     "language.selection": "Select a language",
+    "theme": "Theme",
     "theme.selection": "Select a theme"
 }

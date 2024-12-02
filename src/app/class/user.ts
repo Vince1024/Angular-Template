@@ -3,8 +3,10 @@ import { Roles } from "./roles";
 export type User = {
   
     login_Name: string;
+    
     isAuth: boolean;
-    Id?: string;
+    id?: string;
+
     first_Name?: string;
     last_Name?: string;
     email?: string;

@@ -33,6 +33,7 @@
     "user": {
         "title": "Utilisateur",
         "login": "Nom d'utilisateur",
+        "id": "Id",
         "firstName": "Prénom",
         "lastName": "Nom",
         "email": "Email",

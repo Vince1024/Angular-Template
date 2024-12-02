@@ -32,6 +32,7 @@
     "user": {
         "title": "Usuario",
         "login": "Nombre de usuario",
+        "id": "Id",
         "firstName": "Nombre",
         "lastName": "Apellido",
         "email": "Correo electrónico",

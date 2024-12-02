@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { MatRadioChange } from '@angular/material/radio';
 import { GlobalService } from '../../services/global.service';
+import { LoggerService, logLevel } from '../../services/logger.service';
 
 @Component({
   selector: 'app-language-manager',
@@ -15,7 +16,8 @@ export class LanguageManagerComponent {
 
   constructor(
     private translate: TranslateService,
-    public globalService: GlobalService
+    public globalService: GlobalService,
+    private logger: LoggerService
   ){
     // Subscribe and listen for any changes
     this.globalService.Vars.subscribe();
@@ -30,6 +32,7 @@ export class LanguageManagerComponent {
   switchLanguage(language: string) {
     this.translate.use(language);
     this.globalService.Vars.value.user.language = language;
+    this.logger.log(logLevel.Info, "Language set to [" + this.globalService.Vars.value.user.language + "]", LanguageManagerComponent.name);
     this.globalService.saveLocalStorage();
   }
   

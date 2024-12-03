@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { GlobalService } from './global.service';
 import { LoggerService, logLevel } from './logger.service';
 import { Router } from '@angular/router';
+import { Roles } from '../class/roles';
+import { User } from '../class/user';
 
 @Injectable({
   providedIn: 'root'
@@ -15,7 +17,7 @@ export class AuthenticationService {
     this.globalService.Vars.subscribe();
    }
 
-    signIn(user: string, pass: string) {
+    login(user: string, pass: string) {
         return new Promise(
             (resolve, reject) => {
                 setTimeout(() => {
@@ -30,12 +32,23 @@ export class AuthenticationService {
         )
     }
 
-    signOut(user: string) {
+    logout(user: string) {
         this.globalService.Vars.value.user.login_Name = '';
         this.globalService.Vars.value.user.isAuth = false;
+        this.globalService.Vars.value.user.role = Roles.NONE;
         this.logger.log(logLevel.Info, 'Logout Success for user [' + user + ']', AuthenticationService.name);
         this.router.navigate(['authentication']);
     }
 
+    public get currentUserValue() {
+        return this.globalService.Vars.value.user;
+    }
+
+    public isAuthorized(allowedRoles: string[]): boolean {
+        const user = this.globalService.Vars.value.user;
+        this.logger.log(logLevel.Info, 'isAuthorized for user [' + user.login_Name + ']', AuthenticationService.name);
+        if (!user) return false;
+        return allowedRoles.includes(user.role);
+      }
   
 }

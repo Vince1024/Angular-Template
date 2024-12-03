@@ -18,7 +18,7 @@ export class MainTopMenuComponent {
   @Input() menuTitle = "";
 
   logOut(user: string){
-    this.authenticationService.signOut(user);
+    this.authenticationService.logout(user);
   }
 
 }

@@ -25,7 +25,7 @@ export class AuthenticationComponent {
     this.username = this.nameFormControl.value || '';
     this.password = this.passFormControl.value || '';
 
-    this.authenticationService.signIn(this.username, this.password)
+    this.authenticationService.login(this.username, this.password)
   }
 
   clearUsername() {

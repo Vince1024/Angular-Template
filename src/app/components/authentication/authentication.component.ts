@@ -31,6 +31,7 @@ export class AuthenticationComponent {
     this.password = this.passFormControl.value || '';
 
     this.authenticationService.login(this.username, this.password);
+    // this.router.navigate(['template']);
   }
 
   clearUsername() {

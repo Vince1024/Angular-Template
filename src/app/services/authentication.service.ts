@@ -6,34 +6,28 @@ import { Roles } from '../class/roles';
 import { User } from '../class/user';
 
 @Injectable({
-  providedIn: 'root'
+    providedIn: 'root'
 })
 
 export class AuthenticationService {
 
-private currentUser: User | null = null;
+    private currentUser: User | null = null;
 
-  constructor(public globalService: GlobalService, private router: Router, private logger: LoggerService) 
-  {
-    // Subscribe and listen for any changes
-    this.globalService.Vars.subscribe();
-   }
+    constructor(public globalService: GlobalService, private router: Router, private logger: LoggerService) {
+        // Subscribe and listen for any changes
+        this.globalService.Vars.subscribe();
+    }
 
-    login(user: string, pass: string) {
-        return new Promise(
-            (resolve, reject) => {
-                setTimeout(() => {
-                    // Fake Auth
-                    this.currentUser = { login_Name: user, isAuth: true, role: Roles.USER, lastAccess: new Date(), first_Name: 'Vincent',last_Name: 'PAPUCHON', language: this.globalService.Vars.value.user.language, theme: this.globalService.Vars.value.user.theme };
-                    //
-                    this.globalService.Vars.value.user = this.currentUser;
-                    this.logger.log(logLevel.Info, 'Authentication Success for user [' + this.globalService.Vars.value.user.login_Name + '] with role [' + this.globalService.Vars.value.user.role + ']', AuthenticationService.name);
-                    this.router.navigate(['template']);
-                    resolve(true);
-                }, 2000
-            )
-            }
-        )
+    async login(user: string, pass: string): Promise<boolean> {
+        // Fake Auth
+        this.currentUser = { login_Name: user, isAuth: true, role: Roles.USER, lastAccess: new Date(), first_Name: 'Vincent', last_Name: 'PAPUCHON', id: '80120711', email: 'vincent.papuchon@disney.com', language: this.globalService.Vars.value.user.language, theme: this.globalService.Vars.value.user.theme };
+        await new Promise(f => setTimeout(f, 1000));
+        //
+        this.globalService.Vars.value.user = this.currentUser;
+        this.logger.log(logLevel.Info, 'Authentication Success for user [' + this.globalService.Vars.value.user.login_Name + '] with role [' + this.globalService.Vars.value.user.role + ']', AuthenticationService.name);
+
+        this.router.navigate(['template']);
+        return this.currentUser.isAuth;
     }
 
     logout(user: string) {
@@ -53,7 +47,7 @@ private currentUser: User | null = null;
         const user = this.globalService.Vars.value.user;
         this.logger.log(logLevel.Info, 'isAuthorized for user [' + user.login_Name + ']', AuthenticationService.name);
         if (!user) return false;
-        return allowedRoles.includes(user.role);
-      }
-  
+        return allowedRoles.includes(user.role) && user.isAuth;
+    }
+
 }

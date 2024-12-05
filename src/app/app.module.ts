@@ -35,6 +35,7 @@ import { ThemeManagerComponent } from './components/theme-manager/theme-manager.
 import { LanguageManagerComponent } from './components/language-manager/language-manager.component';
 import { TemplateComponent } from './components/template/template.component';
 import { UserComponent } from './components/user/user.component';
+import { AboutComponent } from './components/about/about.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import { UserComponent } from './components/user/user.component';
     TemplateComponent,
     ThemeManagerComponent,
     UserComponent,
+    AboutComponent,
   ],
   imports: [
     AppRoutingModule,

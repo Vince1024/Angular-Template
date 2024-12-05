@@ -1,4 +1,4 @@
-import { Component, Input, inject, signal } from '@angular/core';
+import { Component, Input, inject, signal, viewChild } from '@angular/core';
 import { GlobalService } from '../../services/global.service';
 import { AuthenticationService } from '../../services/authentication.service';
 

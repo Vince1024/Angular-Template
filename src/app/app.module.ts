@@ -10,6 +10,7 @@ import { MatBadgeModule } from '@angular/material/badge';
 import { MatButton, MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatDialog, MatDialogContent } from '@angular/material/dialog';
 import { MatDivider } from '@angular/material/divider';
 import { MatFormField } from '@angular/material/form-field';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -65,6 +66,7 @@ import { AboutComponent } from './components/about/about.component';
     MatButtonModule,
     MatCardModule,
     MatCheckboxModule,
+    MatDialog,
     MatDivider,
     MatFormField,
     MatFormFieldModule,

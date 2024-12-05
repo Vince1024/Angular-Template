@@ -18,7 +18,7 @@
         "userNameError": "is required",
         "password": "Password",
         "passwordError#1": "is required",
-        "passwordError#2": "length must be at least",
+        "passwordError#2": "Length must be at least",
         "passwordError#3": "insufisant complexity",
         "btn.login": "Login"
     },

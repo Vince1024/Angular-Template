@@ -17,7 +17,7 @@
     "userNameError": "ist erforderlich",
     "password": "Passwort",
     "passwordError#1": "ist erforderlich",
-    "passwordError#2": "die Länge muss mindestens",
+    "passwordError#2": "Die Länge muss mindestens",
     "passwordError#3": "ungenügende Komplexität",
     "btn.login": "Anmelden"
     },

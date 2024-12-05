@@ -9,7 +9,7 @@ export class LocalStorageService {
   private readonly localStorage = inject(DOCUMENT)?.defaultView?.localStorage;
 
   constructor () {
-    
+    // this.clear();
   }
 
   get<T>(key: string): T | null {

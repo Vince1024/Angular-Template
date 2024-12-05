@@ -11,6 +11,8 @@ import { User } from '../class/user';
 
 export class AuthenticationService {
 
+private currentUser: User | null = null;
+
   constructor(public globalService: GlobalService, private router: Router, private logger: LoggerService) 
   {
     // Subscribe and listen for any changes
@@ -21,8 +23,10 @@ export class AuthenticationService {
         return new Promise(
             (resolve, reject) => {
                 setTimeout(() => {
-                    this.globalService.Vars.value.user.login_Name = user;
-                    this.globalService.Vars.value.user.isAuth = true;
+                    // Fake Auth
+                    this.currentUser = { login_Name: user, isAuth: true, role: Roles.USER, lastAccess: new Date(), first_Name: 'Vincent',last_Name: 'PAPUCHON', language: this.globalService.Vars.value.user.language, theme: this.globalService.Vars.value.user.theme };
+                    //
+                    this.globalService.Vars.value.user = this.currentUser;
                     this.logger.log(logLevel.Info, 'Authentication Success for user [' + this.globalService.Vars.value.user.login_Name + '] with role [' + this.globalService.Vars.value.user.role + ']', AuthenticationService.name);
                     this.router.navigate(['template']);
                     resolve(true);
@@ -36,6 +40,7 @@ export class AuthenticationService {
         this.globalService.Vars.value.user.login_Name = '';
         this.globalService.Vars.value.user.isAuth = false;
         this.globalService.Vars.value.user.role = Roles.NONE;
+
         this.logger.log(logLevel.Info, 'Logout Success for user [' + user + ']', AuthenticationService.name);
         this.router.navigate(['authentication']);
     }

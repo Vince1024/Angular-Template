@@ -13,7 +13,7 @@ export class MainTopMenuComponent {
   {
     // Subscribe and listen for any changes
     this.globalService.Vars.subscribe();
-   }
+  }
 
   @Input() menuTitle = "";
 

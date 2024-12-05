@@ -17,11 +17,10 @@
     "userNameError": "est requis",
     "password": "Mot de passe",
     "passwordError#1": "est requis",
-    "passwordError#2": "la longueur doit être d'au moins",
+    "passwordError#2": "La longueur doit être d'au moins",
     "passwordError#3": "complexité insuffisante",
     "btn.login": "Connexion"
     },
-
 
     "languages": {
         "de-DE": "Allemand",

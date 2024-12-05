@@ -1,6 +1,8 @@
 import { Component, Renderer2, signal } from '@angular/core';
 import { AuthenticationService } from '../../services/authentication.service';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormControl, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { GlobalService } from '../../services/global.service';
 
 @Component({
   selector: 'app-authentication',
@@ -19,13 +21,16 @@ export class AuthenticationComponent {
   nameFormControl = new FormControl('', [Validators.required]);
   passFormControl = new FormControl('', [Validators.required, Validators.minLength(12), Validators.pattern(this.StrongPasswordRegx)]);
 
-  constructor(private authenticationService: AuthenticationService, private renderer: Renderer2) { }
+  constructor(public globalService: GlobalService, private authenticationService: AuthenticationService,private router: Router) { 
+    // Subscribe and listen for any changes
+    this.globalService.Vars.subscribe();
+  }
 
   signIn() {
     this.username = this.nameFormControl.value || '';
     this.password = this.passFormControl.value || '';
 
-    this.authenticationService.login(this.username, this.password)
+    this.authenticationService.login(this.username, this.password);
   }
 
   clearUsername() {

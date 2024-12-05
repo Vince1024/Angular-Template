@@ -17,7 +17,7 @@
         "userNameError": "es requerido", 
         "password": "Contraseña", 
         "passwordError#1": "es requerido", 
-        "passwordError#2": "la longitud debe ser al menos", 
+        "passwordError#2": "La longitud debe ser al menos", 
         "passwordError#3": "complejidad insuficiente", 
         "btn.login": "Iniciar sesión"
     },

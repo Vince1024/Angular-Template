@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { GlobalService } from '../../services/global.service';
 
 @Component({
-  selector: 'app-user',
-  templateUrl: './user.component.html',
-  styleUrl: './user.component.scss'
+  selector: 'app-profile',
+  templateUrl: './profile.component.html',
+  styleUrl: './profile.component.scss'
 })
-export class UserComponent {
+export class ProfileComponent {
 
   constructor (public globalService: GlobalService){
     // Subscribe and listen for any changes

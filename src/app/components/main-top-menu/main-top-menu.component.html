@@ -27,7 +27,7 @@
       <mat-icon>person_outline</mat-icon>
     </button>
     <mat-menu #user_menu="matMenu">
-      <button mat-menu-item [disabled]="this.globalService.Vars.value.user.isAuth === false" routerLink="/user">
+      <button mat-menu-item [disabled]="this.globalService.Vars.value.user.isAuth === false" routerLink="/profile">
         <mat-icon>account_box</mat-icon>
         <span>{{ "topMenu.profil" | translate }}</span>
       </button>

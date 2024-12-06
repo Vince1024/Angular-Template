@@ -36,7 +36,7 @@ import { MainTopMenuComponent } from './components/main-top-menu/main-top-menu.c
 import { ThemeManagerComponent } from './components/theme-manager/theme-manager.component';
 import { LanguageManagerComponent } from './components/language-manager/language-manager.component';
 import { TemplateComponent } from './components/template/template.component';
-import { UserComponent } from './components/user/user.component';
+import { ProfileComponent } from './components/profile/profile.component';
 import { AboutComponent } from './components/about/about.component';
 
 @NgModule({
@@ -47,7 +47,7 @@ import { AboutComponent } from './components/about/about.component';
     LanguageManagerComponent,
     TemplateComponent,
     ThemeManagerComponent,
-    UserComponent,
+    ProfileComponent,
     AboutComponent,
   ],
   imports: [

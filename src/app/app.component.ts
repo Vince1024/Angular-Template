@@ -10,6 +10,7 @@ import { GlobalService } from './services/global.service';
 export class AppComponent {
 
   title = '';
+  openNav = false;
 
   constructor (public globalService: GlobalService){
     // Subscribe and listen for any changes

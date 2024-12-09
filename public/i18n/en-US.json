@@ -7,7 +7,7 @@
     
     "topMenu": {
         "home": "Home",
-        "profil": "Profil",
+        "profile": "Profile",
         "logout": "Logout",
         "about": "About"
     },

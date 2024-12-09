@@ -7,7 +7,7 @@
     
     "topMenu": {
         "home": "Inicio",
-        "profil": "Perfil",
+        "profile": "Perfil",
         "logout": "Cerrar sesión"
     },
 

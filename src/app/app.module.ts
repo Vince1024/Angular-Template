@@ -21,6 +21,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatLabel } from '@angular/material/form-field';
 import { MatMenuModule } from "@angular/material/menu";
 import { MatRadioModule } from '@angular/material/radio';
+import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatToolbarModule } from "@angular/material/toolbar";
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
@@ -38,6 +39,7 @@ import { LanguageManagerComponent } from './components/language-manager/language
 import { TemplateComponent } from './components/template/template.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { AboutComponent } from './components/about/about.component';
+import { SideNavComponent } from './components/side-nav/side-nav.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +51,7 @@ import { AboutComponent } from './components/about/about.component';
     ThemeManagerComponent,
     ProfileComponent,
     AboutComponent,
+    SideNavComponent,
   ],
   imports: [
     AppRoutingModule,
@@ -79,6 +82,7 @@ import { AboutComponent } from './components/about/about.component';
     MatLabel,
     MatMenuModule,
     MatRadioModule,
+    MatSidenavModule,
     MatSlideToggleModule,
     MatToolbarModule,
   ],

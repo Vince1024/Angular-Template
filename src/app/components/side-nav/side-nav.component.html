@@ -1,0 +1,34 @@
+
+<mat-sidenav-container>
+    <mat-sidenav [(opened)]="this.globalService.Vars.value.openNav" mode="side">
+        <div class="resize-handle" (mousedown)="startResizing($event)"></div>
+        <button mat-menu-item routerLink="/template">
+            <mat-icon>home</mat-icon>
+            <span>{{ "topMenu.home" | translate }}</span>
+        </button>
+        <button mat-menu-item routerLink="/profile">
+            <mat-icon>account_box</mat-icon>
+            <span>{{ "topMenu.profile" | translate }}</span>
+        </button>
+        <button mat-menu-item routerLink="/template">
+            <mat-icon>home</mat-icon>
+            <span>{{ "topMenu.home" | translate }}</span>
+        </button>
+        <button mat-menu-item routerLink="/profile">
+            <mat-icon>account_box</mat-icon>
+            <span>{{ "topMenu.profile" | translate }}</span>
+        </button>
+        <button mat-menu-item routerLink="/template">
+            <mat-icon>home</mat-icon>
+            <span>{{ "topMenu.home" | translate }}</span>
+        </button>
+        <button mat-menu-item routerLink="/profile">
+            <mat-icon>account_box</mat-icon>
+            <span>{{ "topMenu.profile" | translate }}</span>
+        </button>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <!-- <button mat-raised-button (click)="this.globalService.Vars.value.openNav=!this.globalService.Vars.value.openNav">Toggle</button> -->
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>

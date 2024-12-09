@@ -1,15 +1,16 @@
 
 <mat-toolbar class="main-top-toolbar">
     
-    <button mat-icon-button [matMenuTriggerFor]="main_menu" aria-label="icon-button with menu icon">
+    <button mat-icon-button aria-label="icon-button with menu icon" (click)="this.globalService.Vars.value.openNav=!this.globalService.Vars.value.openNav">
       <mat-icon>menu</mat-icon>
     </button>
-    <mat-menu #main_menu="matMenu">
+    <!-- [matMenuTriggerFor]="main_menu" -->
+    <!-- <mat-menu #main_menu="matMenu">
       <button mat-menu-item routerLink="/template">
         <mat-icon>home</mat-icon>
         <span>{{ "topMenu.home" | translate }}</span>
       </button>
-    </mat-menu>
+    </mat-menu> -->
 
     <span class="vertival-align">&nbsp;
       <img width="30" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
@@ -29,7 +30,7 @@
     <mat-menu #user_menu="matMenu">
       <button mat-menu-item [disabled]="this.globalService.Vars.value.user.isAuth === false" routerLink="/profile">
         <mat-icon>account_box</mat-icon>
-        <span>{{ "topMenu.profil" | translate }}</span>
+        <span>{{ "topMenu.profile" | translate }}</span>
       </button>
       <button mat-menu-item [disabled]="this.globalService.Vars.value.user.isAuth === false" (click)="logOut(this.globalService.Vars.value.user.login_Name)">
         <mat-icon>exit_to_app</mat-icon>

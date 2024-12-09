@@ -1,12 +1,12 @@
 <!-- Main Page -->
 
-<main class="main">
+<!-- top menu -->
+<app-main-top-menu [menuTitle]="title"></app-main-top-menu> <!-- {{ title }} from app.component.ts -->
 
-<div>
-    <app-main-top-menu [menuTitle]="title"></app-main-top-menu> <!-- {{ title }} from app.component.ts -->
-</div>
+<!-- sidenav placeholder -->
+<app-side-nav>coucou</app-side-nav>
 
-    <router-outlet />
-    
-</main>
+<!-- <div class="content"> -->
+    <!-- <router-outlet></router-outlet> -->
+<!-- </div> -->
 

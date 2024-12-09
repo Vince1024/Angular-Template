@@ -25,6 +25,7 @@ export class GlobalService {
     title: 'Angular Template',
     version: '1.0.0',
 
+    openNav: false,
     user: this.usr
   });
 

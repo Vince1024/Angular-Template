@@ -1,12 +1,5 @@
 // /* You can add global styles to this file, and also import other style files */
 
-// @import "./App/themes/themes.scss";
-
-// html,
-// body {
-//   height: 100%;
-// }
-
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
@@ -28,28 +21,11 @@ body {
   align-items: center;
 }
 
-// .center-div {
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-// }
-
-// .small-toggle {
-//   transform: scale(0.5);
-// }
-
 button {
   margin: 5px;
   // display: flex;
   // justify-content: flex-end;
 }
-
-// .container {
-//   margin-top: 5px;
-//   margin-left: 5px;
-//   margin-bottom: 5px;
-//   margin-right: 5px;
-// }
 
 mat-card {
   width: fit-content;

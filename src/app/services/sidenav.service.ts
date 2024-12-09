@@ -10,9 +10,7 @@ export class SidenavService {
 
   get sidenavWidth(): number {
     return parseInt(
-      getComputedStyle(document.body).getPropertyValue('--sidenav-width'),
-      10
-    );
+      getComputedStyle(document.body).getPropertyValue('--sidenav-width'), 10 );
   }
 
   setSidenavWidth(width: number) {

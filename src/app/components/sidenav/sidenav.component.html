@@ -1,6 +1,6 @@
 
 <mat-sidenav-container>
-    <mat-sidenav [(opened)]="this.globalService.Vars.value.openNav" mode="side">
+    <mat-sidenav [(opened)]="this.globalService.Vars.value.openNav" mode="side" [ngClass]="{'grow_class': this.sidenavService.sidenavWidth === this.sidenavService.sidenavMinWidth}">
         
         <div class="resize-handle" (mousedown)="startResizing($event)" [class.resizing]="resizingEvent.isResizing"></div>
 

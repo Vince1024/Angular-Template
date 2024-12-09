@@ -8,10 +8,6 @@
     // makes the sidenav stay in place, even when content is scrollable
     position: sticky;
     top: 0;
-
-    // background-color: rgb(237, 241, 243);
-
-    // border-right: 2px solid rgb(192, 192, 192);
 }
 
 mat-sidenav-container {
@@ -29,6 +25,15 @@ mat-sidenav {
     box-sizing: border-box;
     border-radius: 0;
   }
+
+.grow_class {
+
+    &:hover {
+        width: 300px;
+        transition: width 0.2s ease-in-out;
+    }
+
+}
 
 .resize-handle {
     height: 100%;

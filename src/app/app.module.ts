@@ -24,6 +24,7 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatToolbarModule } from "@angular/material/toolbar";
+import { MatTooltipModule } from '@angular/material/tooltip';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 // import ngx-translate and the http loader
@@ -85,6 +86,7 @@ import { SidenavComponent } from './components/sidenav/sidenav.component';
     MatSidenavModule,
     MatSlideToggleModule,
     MatToolbarModule,
+    MatTooltipModule,
   ],
   providers: [
     provideAnimationsAsync(),

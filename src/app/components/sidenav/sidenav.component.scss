@@ -37,6 +37,13 @@ mat-sidenav {
 
 }
 
+.bottomRelative {
+    position: absolute;
+    bottom: 80px;
+    left: 0;
+    width: 100%;
+}
+
 .resize-handle {
     height: 100%;
 

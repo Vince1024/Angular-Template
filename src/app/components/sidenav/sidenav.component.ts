@@ -1,6 +1,7 @@
 import { Component, HostListener } from '@angular/core';
 import { GlobalService } from '../../services/global.service';
 import { SidenavService } from '../../services/sidenav.service';
+import { AuthenticationService } from '../../services/authentication.service';
 
 @Component({
   selector: 'app-sidenav',
@@ -21,10 +22,15 @@ export class SidenavComponent {
 
   constructor(
     public globalService: GlobalService,
+    private authenticationService: AuthenticationService,
     public sidenavService: SidenavService
   ){
     // Subscribe and listen for any changes
     this.globalService.Vars.subscribe()
+  }
+
+  logOut(user: string){
+    this.authenticationService.logout(user);
   }
 
   startResizing(event: MouseEvent): void {
@@ -57,6 +63,8 @@ updateSidenavWidth(event: MouseEvent) {
 
 @HostListener('window:mouseup')
 stopResizing() {
+  // this.globalService.Vars.value.openNav=!this.globalService.Vars.value.openNav;
+  // this.globalService.Vars.value.openNav=!this.globalService.Vars.value.openNav;
   this.resizingEvent.isResizing = false;
 }
 

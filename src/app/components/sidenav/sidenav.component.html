@@ -1,18 +1,30 @@
-
 <mat-sidenav-container>
-    <mat-sidenav [(opened)]="this.globalService.Vars.value.openNav" mode="side" [ngClass]="{'grow_class': this.sidenavService.sidenavWidth === this.sidenavService.sidenavMinWidth}">
-        
-        <div class="resize-handle" (mousedown)="startResizing($event)" [class.resizing]="resizingEvent.isResizing"></div>
+    <mat-sidenav [(opened)]="this.globalService.Vars.value.openNav" mode="side"
+        [ngClass]="{'grow_class': this.sidenavService.sidenavWidth === this.sidenavService.sidenavMinWidth}">
 
-        <button mat-menu-item routerLink="/template">
-            <mat-icon>home</mat-icon>
-            <span>{{ "topMenu.home" | translate }}</span>
-        </button>
-        <button mat-menu-item routerLink="/profile">
-            <mat-icon>account_box</mat-icon>
-            <span>{{ "topMenu.profile" | translate }}</span>
-        </button>
-       
+        <div class="resize-handle" (mousedown)="startResizing($event)" [class.resizing]="resizingEvent.isResizing">
+        </div>
+
+        <div class="">
+            <button mat-menu-item routerLink="/template">
+                <mat-icon>home</mat-icon>
+                <span>{{ "topMenu.home" | translate }}</span>
+            </button>
+        </div>
+
+        <!-- <mat-divider></mat-divider> -->
+        <div class="bottomRelative">
+            <mat-divider></mat-divider>
+            <button mat-menu-item [disabled]="this.globalService.Vars.value.user.isAuth === false" routerLink="/profile">
+                <mat-icon>account_box</mat-icon>
+                <span>{{ "topMenu.profile" | translate }}</span>
+              </button>
+            <button mat-menu-item [disabled]="this.globalService.Vars.value.user.isAuth === false" (click)="logOut(this.globalService.Vars.value.user.login_Name)">
+                <mat-icon>exit_to_app</mat-icon>
+                <span>{{ "topMenu.logout" | translate }}</span>
+              </button>
+        </div>
+
     </mat-sidenav>
     <mat-sidenav-content>
         <router-outlet></router-outlet>

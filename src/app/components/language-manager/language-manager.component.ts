@@ -26,7 +26,7 @@ export class LanguageManagerComponent {
     this.translate.setDefaultLang('en-US');
 
     this.installedLanguages = this.getInstalledLanguages();
-    this.switchLanguage(this.globalService.Vars.value.user.language ||'en-US');
+    this.switchLanguage(this.globalService.Vars.value.user.language || 'en-US');
   }
   
   switchLanguage(language: string) {

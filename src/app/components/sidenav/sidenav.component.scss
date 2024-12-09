@@ -63,4 +63,9 @@ mat-sidenav-container {
         z-index: 1;
     }
 
+    &.resizing::after {
+        width: 100px;
+        right: calc(-100px / 2);
+      }
+
 }

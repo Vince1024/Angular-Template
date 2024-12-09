@@ -39,7 +39,7 @@ import { LanguageManagerComponent } from './components/language-manager/language
 import { TemplateComponent } from './components/template/template.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { AboutComponent } from './components/about/about.component';
-import { SideNavComponent } from './components/side-nav/side-nav.component';
+import { SidenavComponent } from './components/sidenav/sidenav.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +51,7 @@ import { SideNavComponent } from './components/side-nav/side-nav.component';
     ThemeManagerComponent,
     ProfileComponent,
     AboutComponent,
-    SideNavComponent,
+    SidenavComponent,
   ],
   imports: [
     AppRoutingModule,

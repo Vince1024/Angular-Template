@@ -3,11 +3,11 @@ import { GlobalService } from '../../services/global.service';
 import { SidenavService } from '../../services/sidenav.service';
 
 @Component({
-  selector: 'app-side-nav',
-  templateUrl: './side-nav.component.html',
-  styleUrl: './side-nav.component.scss'
+  selector: 'app-sidenav',
+  templateUrl: './sidenav.component.html',
+  styleUrl: './sidenav.component.scss'
 })
-export class SideNavComponent {
+export class SidenavComponent {
 
   /**
    * This stores the state of the resizing event and is updated

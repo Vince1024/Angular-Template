@@ -4,12 +4,14 @@ import { AuthenticationComponent } from './components/authentication/authenticat
 import { TemplateComponent } from './components/template/template.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { AuthGuard } from './services/auth.guard';
+import { TestViewComponent } from './components/test-view/test-view.component';
 
 const routes: Routes = [
   { path: '', component: AuthenticationComponent },
   { path: 'authentication', component: AuthenticationComponent },
   { path: 'template', component: TemplateComponent, canActivate: [AuthGuard], data: { roles: ['VIEWER','USER','SUPER_USER','ADMIN'] } },
-  { path: 'profile', component: ProfileComponent, canActivate: [AuthGuard], data: { roles: ['USER', 'SUPER_USER', 'ADMIN'] } }
+  { path: 'profile', component: ProfileComponent, canActivate: [AuthGuard], data: { roles: ['USER', 'SUPER_USER', 'ADMIN'] } },
+  { path: 'view', component: TestViewComponent, canActivate: [AuthGuard], data: { roles: ['USER', 'SUPER_USER', 'ADMIN'] } }
 ];
 
 @NgModule({

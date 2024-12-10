@@ -20,11 +20,14 @@ import { MatIcon, MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatLabel } from '@angular/material/form-field';
 import { MatMenuModule } from "@angular/material/menu";
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatToolbarModule } from "@angular/material/toolbar";
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatTreeModule } from '@angular/material/tree';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 // import ngx-translate and the http loader
@@ -41,6 +44,7 @@ import { TemplateComponent } from './components/template/template.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { AboutComponent } from './components/about/about.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
+import { TestViewComponent } from './components/test-view/test-view.component';
 
 @NgModule({
   declarations: [
@@ -53,6 +57,7 @@ import { SidenavComponent } from './components/sidenav/sidenav.component';
     ProfileComponent,
     AboutComponent,
     SidenavComponent,
+    TestViewComponent,
   ],
   imports: [
     AppRoutingModule,
@@ -82,11 +87,14 @@ import { SidenavComponent } from './components/sidenav/sidenav.component';
     MatInputModule,
     MatLabel,
     MatMenuModule,
+    MatProgressBarModule,
+    MatProgressSpinnerModule,
     MatRadioModule,
     MatSidenavModule,
     MatSlideToggleModule,
     MatToolbarModule,
     MatTooltipModule,
+    MatTreeModule,
   ],
   providers: [
     provideAnimationsAsync(),

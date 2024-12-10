@@ -13,6 +13,7 @@ import { GlobalService } from '../../services/global.service';
 export class AuthenticationComponent {
 
   hide = signal(true);
+  authenticating = false;
 
   username: string = '';
   password: string = '';
@@ -27,11 +28,11 @@ export class AuthenticationComponent {
   }
 
   signIn() {
+    this.authenticating = true;
     this.username = this.nameFormControl.value || '';
     this.password = this.passFormControl.value || '';
 
     this.authenticationService.login(this.username, this.password);
-    // this.router.navigate(['template']);
   }
 
   clearUsername() {

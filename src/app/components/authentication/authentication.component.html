@@ -20,7 +20,8 @@
                     </button>
                     }
                     @if (nameFormControl.hasError('required')) {
-                    <mat-error>{{ "login.userName" | translate }} <strong>{{ "login.userNameError" | translate }}</strong></mat-error>
+                    <mat-error>{{ "login.userName" | translate }} <strong>{{ "login.userNameError" | translate
+                            }}</strong></mat-error>
                     }
                 </mat-form-field>
             </p>
@@ -38,24 +39,33 @@
                         <mat-icon>close</mat-icon></button>
                     }
                     @if (passFormControl.hasError('required')) {
-                    <mat-error>{{ "login.password" | translate }} <strong>{{ "login.passwordError#1" | translate }}</strong></mat-error>
+                    <mat-error>{{ "login.password" | translate }} <strong>{{ "login.passwordError#1" | translate
+                            }}</strong></mat-error>
                     }
                     @if (passFormControl.hasError('minlength')) {
                     <mat-error>{{ "login.passwordError#2" | translate }} <strong>12</strong></mat-error>
                     }
                     @if (passFormControl.hasError('pattern')) {
-                    <mat-error>{{ "login.password" | translate }} <strong>{{ "login.passwordError#3" | translate }}</strong></mat-error>
+                    <mat-error>{{ "login.password" | translate }} <strong>{{ "login.passwordError#3" | translate
+                            }}</strong></mat-error>
                     }
                 </mat-form-field>
             </p>
 
             <div class="button">
-            <button mat-icon-button [matMenuTriggerFor]="lang_menu" aria-label="icon-button with a menu">
-                <mat-icon>language</mat-icon>
-            </button>
+                <div>
+                    <mat-spinner *ngIf="authenticating === true" [diameter]="30"></mat-spinner>
+                </div>
 
-            <button mat-raised-button (click)="signIn()"
-                    [disabled]="nameFormControl.errors || passFormControl.errors">{{ "login.btn.login" | translate }}</button>
+                <span class="spacer"></span>
+
+                <button mat-icon-button [matMenuTriggerFor]="lang_menu" aria-label="icon-button with a menu">
+                    <mat-icon>language</mat-icon>
+                </button>
+
+                <button mat-raised-button (click)="signIn()"
+                    [disabled]="nameFormControl.errors || passFormControl.errors">{{ "login.btn.login" | translate
+                    }}</button>
             </div>
 
             <mat-menu #lang_menu="matMenu">

@@ -37,7 +37,7 @@ export class SidenavComponent {
     this.resizingEvent = {
       isResizing: true,
       startingCursorX: event.clientX,
-      startingWidth: this.sidenavService.sidenavWidth,
+      startingWidth: event.clientX,
     };
   }
 

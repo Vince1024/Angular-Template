@@ -1,4 +1,4 @@
-<mat-sidenav-container>
+<mat-sidenav-container autosize>
     <mat-sidenav [(opened)]="this.globalService.Vars.value.openNav" mode="side"
         [ngClass]="{'grow_class': this.sidenavService.sidenavWidth === this.sidenavService.sidenavMinWidth}">
 
@@ -9,6 +9,10 @@
             <button mat-menu-item routerLink="/template">
                 <mat-icon>home</mat-icon>
                 <span>{{ "topMenu.home" | translate }}</span>
+            </button>
+            <button mat-menu-item routerLink="/view">
+                <mat-icon>assessment</mat-icon>
+                <span>Test</span>
             </button>
         </div>
 

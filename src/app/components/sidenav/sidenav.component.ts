@@ -63,8 +63,6 @@ updateSidenavWidth(event: MouseEvent) {
 
 @HostListener('window:mouseup')
 stopResizing() {
-  // this.globalService.Vars.value.openNav=!this.globalService.Vars.value.openNav;
-  // this.globalService.Vars.value.openNav=!this.globalService.Vars.value.openNav;
   this.resizingEvent.isResizing = false;
 }
 

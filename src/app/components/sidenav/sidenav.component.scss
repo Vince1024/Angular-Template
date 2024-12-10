@@ -37,6 +37,10 @@ mat-sidenav {
 
 }
 
+.active-link {
+      color: rgba(11, 11, 228, 0.637) !important; /* Customize the active link color */
+    }
+
 .bottomRelative {
     position: absolute;
     bottom: 80px;

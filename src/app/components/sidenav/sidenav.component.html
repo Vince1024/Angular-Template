@@ -6,12 +6,12 @@
         </div>
 
         <div class="">
-            <button mat-menu-item routerLink="/template">
-                <mat-icon>home</mat-icon>
+            <button mat-menu-item routerLink="/template" [routerLinkActive]="['active-link']">
+                <mat-icon [routerLinkActive]="['active-link']">home</mat-icon>
                 <span>{{ "topMenu.home" | translate }}</span>
             </button>
-            <button mat-menu-item routerLink="/view">
-                <mat-icon>assessment</mat-icon>
+            <button mat-menu-item routerLink="/view" [routerLinkActive]="['active-link']">
+                <mat-icon [routerLinkActive]="['active-link']">assessment</mat-icon>
                 <span>Test</span>
             </button>
         </div>
@@ -19,8 +19,8 @@
         <!-- <mat-divider></mat-divider> -->
         <div class="bottomRelative">
             <mat-divider></mat-divider>
-            <button mat-menu-item [disabled]="this.globalService.Vars.value.user.isAuth === false" routerLink="/profile">
-                <mat-icon>account_box</mat-icon>
+            <button mat-menu-item [disabled]="this.globalService.Vars.value.user.isAuth === false" routerLink="/profile" [routerLinkActive]="['active-link']">
+                <mat-icon [routerLinkActive]="['active-link']">account_box</mat-icon>
                 <span>{{ "topMenu.profile" | translate }}</span>
               </button>
             <button mat-menu-item [disabled]="this.globalService.Vars.value.user.isAuth === false" (click)="logOut(this.globalService.Vars.value.user.login_Name)">

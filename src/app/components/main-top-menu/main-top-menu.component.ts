@@ -6,9 +6,10 @@ import { MatMenuTrigger } from '@angular/material/menu';
 import { MatDialog } from '@angular/material/dialog';
 
 @Component({
-  selector: 'app-main-top-menu',
-  templateUrl: './main-top-menu.component.html',
-  styleUrl: './main-top-menu.component.scss'
+    selector: 'app-main-top-menu',
+    templateUrl: './main-top-menu.component.html',
+    styleUrl: './main-top-menu.component.scss',
+    standalone: false
 })
 export class MainTopMenuComponent {
 

@@ -26,9 +26,10 @@ const TREE_DATA: FoodNode[] = [
 ];
 
 @Component({
-  selector: 'app-test-view',
-  templateUrl: './test-view.component.html',
-  styleUrl: './test-view.component.scss'
+    selector: 'app-test-view',
+    templateUrl: './test-view.component.html',
+    styleUrl: './test-view.component.scss',
+    standalone: false
 })
 export class TestViewComponent {
   dataSource = TREE_DATA;

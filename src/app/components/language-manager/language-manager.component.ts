@@ -5,9 +5,10 @@ import { GlobalService } from '../../services/global.service';
 import { LoggerService, logLevel } from '../../services/logger.service';
 
 @Component({
-  selector: 'app-language-manager',
-  templateUrl: './language-manager.component.html',
-  styleUrl: './language-manager.component.scss'
+    selector: 'app-language-manager',
+    templateUrl: './language-manager.component.html',
+    styleUrl: './language-manager.component.scss',
+    standalone: false
 })
 
 export class LanguageManagerComponent {

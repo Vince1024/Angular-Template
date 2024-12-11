@@ -4,9 +4,10 @@ import { SidenavService } from '../../services/sidenav.service';
 import { AuthenticationService } from '../../services/authentication.service';
 
 @Component({
-  selector: 'app-sidenav',
-  templateUrl: './sidenav.component.html',
-  styleUrl: './sidenav.component.scss'
+    selector: 'app-sidenav',
+    templateUrl: './sidenav.component.html',
+    styleUrl: './sidenav.component.scss',
+    standalone: false
 })
 export class SidenavComponent {
 

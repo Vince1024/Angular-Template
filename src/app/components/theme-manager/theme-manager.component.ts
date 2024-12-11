@@ -4,9 +4,10 @@ import { MatRadioChange } from '@angular/material/radio';
 import { GlobalService } from '../../services/global.service';
 
 @Component({
-  selector: 'app-theme-manager',
-  templateUrl: './theme-manager.component.html',
-  styleUrl: './theme-manager.component.scss'
+    selector: 'app-theme-manager',
+    templateUrl: './theme-manager.component.html',
+    styleUrl: './theme-manager.component.scss',
+    standalone: false
 })
 export class ThemeManagerComponent {
 

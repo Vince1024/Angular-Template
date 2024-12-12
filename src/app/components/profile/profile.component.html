@@ -14,7 +14,7 @@
                         <td class="pic" rowspan="2"><img class="pic" mat-card-md-image
                                 src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="User picture">
                         </td>
-                        <td class="name" height="20">Vincent PAPUCHON</td>
+                        <td class="name" height="20">{{this.globalService.Vars.value.user.first_Name}} {{this.globalService.Vars.value.user.last_Name}}</td>
                     </tr>
                     <tr>
                         <td class="details">{{ "user.role" | translate }}: {{ this.globalService.Vars.value.user.role }}</td>

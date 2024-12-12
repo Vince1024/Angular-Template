@@ -1,7 +1,8 @@
-import { inject, Injectable } from '@angular/core';
+import { importProvidersFrom, inject, Injectable } from '@angular/core';
 import { BehaviorSubject, timestamp } from 'rxjs';
 import { LocalStorageService } from './local-storage.service';
 import { LoggerService, logLevel } from './logger.service';
+import { version, dependencies } from '../../../package.json';
 import { User } from '../class/user';
 import { Roles } from '../class/roles';
 
@@ -19,11 +20,13 @@ export class GlobalService {
     this.loadLocalStorage();
   }
 
+  public version: string = version;
+  public depends = dependencies;
   public usr: User = { login_Name: '', isAuth: false, role: Roles.NONE };
 
   public Vars = new BehaviorSubject<any>({
     title: 'Angular Template',
-    version: '1.0.0',
+    version: this.version,
 
     openNav: false,
     user: this.usr

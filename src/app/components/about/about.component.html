@@ -9,11 +9,26 @@
         <li>Logger</li>
         <li>Material Design</li>
         <li>A default top menu bar</li>
+        <li>Sidenav bar</li>
         <li>Dynamic Theming</li>
         <li>Dynamic Multi-Language support with ngx-translate</li>
         <li>Preserve User Settings</li>
         <p></p>
     </ul>
+
+    <div *ngIf="this.globalService.Vars.value.user.role == 'ADMIN'">
+        <p>Project dependencies :</p>
+        <table>
+            <ul>
+                <tr *ngFor="let dep of this.globalService.depends | keyvalue">
+                    <td>
+                        <li>{{dep.key}} :</li>
+                    </td>
+                    <td>{{dep.value}}</td>
+                </tr>
+            </ul>
+        </table>
+    </div>
 
     <mat-dialog-actions>
         <div class="button">

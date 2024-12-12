@@ -11,15 +11,15 @@ const TREE_DATA: FoodNode[] = [
     children: [{name: 'Windows'}, {name: 'Linux'}, {name: 'Android'}],
   },
   {
-    name: 'Vegetables',
+    name: 'Versions',
     children: [
       {
-        name: 'Green',
-        children: [{name: 'Broccoli'}, {name: 'Brussels sprouts'}],
+        name: 'Release',
+        children: [{name: '1.0.0'}, {name: '1.0.1'}],
       },
       {
-        name: 'Orange',
-        children: [{name: 'Pumpkins'}, {name: 'Carrots'}],
+        name: 'Qa',
+        children: [{name: '1.0.2'}, {name: '1.0.3'}],
       },
     ],
   },

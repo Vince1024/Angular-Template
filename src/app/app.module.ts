@@ -19,6 +19,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatIcon, MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatLabel } from '@angular/material/form-field';
+import { MatListModule } from '@angular/material/list';
 import { MatMenuModule } from "@angular/material/menu";
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
@@ -86,6 +87,7 @@ import { TestViewComponent } from './components/test-view/test-view.component';
     MatIconModule,
     MatInputModule,
     MatLabel,
+    MatListModule,
     MatMenuModule,
     MatProgressBarModule,
     MatProgressSpinnerModule,

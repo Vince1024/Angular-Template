@@ -20,7 +20,7 @@ export class AuthenticationService {
 
     async login(user: string, pass: string): Promise<boolean> {
         // Fake Auth
-        this.currentUser = { login_Name: user, isAuth: true, role: Roles.USER, lastAccess: new Date(), first_Name: 'Vincent', last_Name: 'PAPUCHON', id: '80120711', email: 'vincent.papuchon@disney.com', language: this.globalService.Vars.value.user.language, theme: this.globalService.Vars.value.user.theme };
+        this.currentUser = { login_Name: user, isAuth: true, role: Roles.ADMIN, lastAccess: new Date(), first_Name: 'Vincent', last_Name: 'PAPUCHON', id: '80120711', email: 'vincent.papuchon@disney.com', language: this.globalService.Vars.value.user.language, theme: this.globalService.Vars.value.user.theme };
         await new Promise(f => setTimeout(f, 2000));
         //
         this.globalService.Vars.value.user = this.currentUser;

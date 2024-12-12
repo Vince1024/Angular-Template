@@ -14,6 +14,9 @@ export class AboutComponent {
   constructor(public globalService: GlobalService) { 
     // Subscribe and listen for any changes
     this.globalService.Vars.subscribe();
+    console.log(this.globalService.Vars.value.dependencies);
   }
+
+  
 
 }

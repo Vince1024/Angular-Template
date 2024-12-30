@@ -2,6 +2,19 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.11.
 
+This is a starter project for Angular apps.
+
+This includes :
+* Basic User Authentication
+* Auth Guard
+* Logger
+* Material Design
+* A top menu bar
+* A sidenav bar
+* Dynamic Theming
+* Dynamic Multi-Language support with ngx-translate
+* Preserve User Settings
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.

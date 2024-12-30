@@ -33,8 +33,6 @@ export class GlobalService {
   });
 
   loadLocalStorage() {
-    // this.Vars.value.user.language = (this.localStorageService.get('user.language') || 'en-US');
-    // this.Vars.value.user.theme = (this.localStorageService.get('user.theme') || 'azure-blue');
     this.Vars.value.user = (this.localStorageService.get('user') || this.usr );
     this.logger.log(logLevel.Info, 'LocalStorage Loaded', GlobalService.name);
     this.logger.log(logLevel.Info, this.Vars.value, GlobalService.name);
@@ -42,8 +40,6 @@ export class GlobalService {
   
   saveLocalStorage() {
     this.localStorageService.set('user', this.Vars.value.user);
-    // this.localStorageService.set('user.language', this.Vars.value.user.language);
-    // this.localStorageService.set('user.theme', this.Vars.value.user.theme);
     this.logger.log(logLevel.Info, this.Vars.value, GlobalService.name);
     this.logger.log(logLevel.Info, 'LocalStorage Saved', GlobalService.name);
   }
